@@ -1,0 +1,590 @@
+<!doctype html><html amp lang="en-gb"><head><meta charset="utf-8"><title>Announcing Fluxstore 1.3 - InspireUI Blog</title><meta name="description" content="Hello from InspireUI, this is our regular update for the detailed changelog guide and roadmap for our product update. At&hellip;"><link rel="canonical" href="https://docs.inspireui.com/announcing-fluxstore-13/"><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" type="text/css"><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.inspireui.com/amp/announcing-fluxstore-13/"},"headline":"Announcing Fluxstore 1.3","datePublished":"2019-06-24T16:17","dateModified":"2022-11-02T14:25","image":{"@type":"ImageObject","url":"https://docs.inspireui.com/media/posts/2/1_LDrliTg7HPoSgkQocrrx5w.gif","height":672,"width":895},"description":"Hello from InspireUI, this is our regular update for the detailed changelog guide and roadmap for our product update. At&hellip;","author":{"@type":"Person","name":"InspireUI","url":"https://docs.inspireui.com/amp/authors/inspireui/"},"publisher":{"@type":"Organization","name":"InspireUI","logo":{"@type":"ImageObject","url":"https://docs.inspireui.com/media/website/inspireui-icon2x-1.png","height":119,"width":374}}}</script><style amp-custom>article,
+aside,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+amp-img {
+  max-width: 100%; }
+
+button,
+input,
+select,
+textarea {
+  font: inherit; }
+
+html {
+  font-size: 1rem; }
+
+body {
+  background: #f1f1f1;
+  color: #262626;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.6; }
+
+a {
+  color:  #039be5;
+  text-decoration: none;
+  -webkit-transition: all 0.12s linear 0s;
+  -o-transition: all 0.12s linear 0s;
+  transition: all 0.12s linear 0s; }
+
+a:hover {
+  color: #262626;
+  text-decoration: underline;
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip: ink; }
+
+a:active {
+  color: #262626; }
+
+a:focus {
+  outline: 2px dotted #039be5; }
+
+figure,
+blockquote,
+p,
+ul,
+ol,
+dl,
+table,
+hr,
+fieldset {
+  margin-top: 1.6rem; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #262626;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 2.13333rem; }
+
+h1 {
+  font-size: 1.67583rem;
+  font-weight: normal; }
+
+h2 {
+  font-size: 1.4729rem; }
+
+h3 {
+  font-size: 1.29454rem; }
+
+h4 {
+  font-size: 1.13778rem; }
+
+h5 {
+  font-size: 1rem; }
+
+h6 {
+  font-size: 0.87891rem; }
+
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+  margin-top: 0.8rem; }
+
+b,
+strong {
+  font-weight: 600; }
+
+blockquote {
+  color: #6c7175;
+  font-family: "Droid Serif", "Times", "Source Serif Pro", serif;
+  font-style: italic;
+  padding: 1.33333rem 0.53333rem 1.33333rem 3.2rem;
+  position: relative; }
+  blockquote:before {
+    display: block;
+    content: "\201C";
+    font-size: 4.41226rem;
+    position: absolute;
+    left: 0;
+    top: -12px;
+    color: rgba(108, 113, 117, 0.5); }
+  blockquote > :nth-child(1) {
+    margin-top: 0; }
+
+ul,
+ol {
+  margin-left: 2rem; }
+  ul > li,
+  ol > li {
+    list-style: inherit;
+    padding: 0 0 0.26667rem 0.26667rem; }
+
+dl dt {
+  color: #262626;
+  font-weight: 600; }
+
+code,
+pre {
+  background-color: #f1f1f1;
+  font-family: monospace; }
+
+pre {
+  margin: 1.6rem 0 0;
+  padding: 1.6rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto; }
+  pre > code {
+    color: #262626;
+    padding: 0; }
+
+code {
+  border-radius: 3px;
+  color: #262626;
+  padding: 0.26667rem 0.53333rem; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #d4d4d4;
+  width: 100%;
+  overflow-x: auto;
+  vertical-align: top;
+  text-align: left;
+  white-space: nowrap; }
+  table th {
+    font-weight: 500;
+    padding: 0.53333rem 1.06667rem; }
+  table tr {
+    border-bottom: 1px solid #d4d4d4; }
+    table tr:nth-child(2n) {
+      background: #f1f1f1; }
+  table td {
+    padding: 0.53333rem 1.06667rem; }
+
+figcaption {
+  clear: both;
+  color: rgba(108, 113, 117, 0.6);
+  font-size: 0.82397rem;
+  margin: 0.8rem 0 0;
+  text-align: center; }
+
+sub,
+sup {
+  font-size: 65%; }
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+
+.btn, [type=button],
+[type=submit],
+button {
+  background: #039be5;
+  border: none;
+  border-radius: 2px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.87891rem;
+  font-weight: 500;
+  line-height: 1.9;
+  padding: 0.53333rem 1.33333rem;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all .15s ease;
+  -o-transition: all .15s ease;
+  transition: all .15s ease;
+  width: auto; }
+  .btn:hover, [type=button]:hover,
+  [type=submit]:hover,
+  button:hover {
+    background: #262626;
+    color: #ffffff; }
+  .btn:focus, [type=button]:focus,
+  [type=submit]:focus,
+  button:focus {
+    outline: none; }
+  .btn-outline {
+    border: 1px solid #ddd;
+    background: #ffffff;
+    border-radius: 3px;
+    color: #262626; }
+
+[type=button],
+[type=submit],
+button {
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+.navbar {
+  background: #039be5;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  line-height: 3;
+  max-height: 4rem; }
+  .navbar > div {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto; }
+  .navbar a {
+    color: #ffffff;
+    text-decoration: none; }
+  .navbar-sidebar-toggle {
+    left: 0;
+    position: relative;
+    text-indent: -99999rem; }
+    .navbar-sidebar-toggle:before {
+      content: "";
+      display: block;
+      border-top: 0.375rem double #ffffff;
+      border-bottom: 0.125rem solid #ffffff;
+      height: 0.125rem;
+      position: absolute;
+      text-indent: 0;
+      top: 50%;
+      width: 1.3rem;
+      -webkit-transform: translate(0px, -50%);
+      -ms-transform: translate(0px, -50%);
+      transform: translate(0px, -50%); }
+
+
+.logo {
+                    background-image: url('https://docs.inspireui.com/media/website/inspireui-icon2x-1.png');
+                    background-size: auto 2rem;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+            display: inline-block;
+  font-weight: 600;
+  line-height: 1;
+            margin: 0 auto;
+            height: 2rem;
+            text-indent: -9999px;
+            width: 240px;vertical-align: middle;
+        }
+        .logo.logo-text {
+            line-height: 2;
+            text-align: center;
+            text-indent: 0;
+        }
+
+amp-sidebar {
+  background: #ffffff;
+  width: 240px; }
+  amp-sidebar > ul {
+    margin: 0.8rem 0 0;
+    padding: 0; }
+    amp-sidebar > ul ul {
+      border-left: 1px solid #d4d4d4;
+      margin: 0.53333rem 0 0; }
+    amp-sidebar > ul li {
+      color: #262626;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      list-style: none;
+      line-height: 1.4;
+      padding: 0.42667rem 1.06667rem; }
+      amp-sidebar > ul li li {
+        font-weight: normal;
+        padding: 0.26667rem 0 0.26667rem 1.06667rem; }
+    amp-sidebar > ul a,
+    amp-sidebar > ul a:visited {
+      color: #262626; }
+
+.bg-white {
+  background: #ffffff; }
+
+.wrap-page {
+  max-width: 700px;
+  margin: 0 auto; }
+
+@media all and (max-width: 43.6875em) {
+  .wrap-inner {
+    padding: 0 6%; } }
+
+.page-title {
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  margin-bottom: 0.8rem;
+  padding: 1.6rem 6%; }
+  .page-title > h1 {
+    margin: 0;
+    font-size: 1.29454rem; }
+  .page-title > p {
+    font-size: 0.87891rem;
+    color: #6c7175;
+    line-height: 1.3;
+    margin: 0.26667rem 0 0; }
+  .page-title-author {
+    border-radius: 50%;
+    float: left;
+    height: 2.5rem;
+    width: 2.5rem; }
+    .page-title-author + h1 {
+      margin-left: 3.5rem; }
+      .page-title-author + h1 + p {
+        margin-left: 3.5rem; }
+
+.card {
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  margin-bottom: 0.8rem;
+  padding-bottom: 1.06667rem; }
+
+  .card-meta {
+    border-top: 1px solid #d4d4d4;
+    color: rgba(108, 113, 117, 0.6);
+    font-size: 0.7242rem;
+    font-weight: 500;
+    margin-top: 1.06667rem;
+    padding-top: 1.06667rem;
+    text-transform: uppercase; }
+    .card-meta a + time:before {
+      content: "";
+      background: #d4d4d4;
+      display: inline-block;
+      height: 3px;
+      margin: 0 8px;
+      width: 3px;
+      vertical-align: middle;
+      border-radius: 50%; }
+  .card-text {
+    font-size: 0.9375rem;
+    overflow: hidden;
+    padding: 0 6%; }
+    .card-text h2 {
+      font-size: 1.13778rem; }
+
+.post {
+  margin-bottom: 2.13333rem; }
+  .post-featured-image {
+    margin-top: 0;
+    position: relative; }
+    .post-featured-image > figcaption {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 3px;
+      color: #ffffff;
+      position: absolute;
+      bottom: 0.8rem;
+      padding: 0 0.26667rem;
+      right: 6%; }
+  .post-header {
+    margin-bottom: 2.13333rem; }
+  .post-meta {
+    border-bottom: 1px solid #d4d4d4;
+    color: rgba(108, 113, 117, 0.6);
+    font-size: 0.7242rem;
+    font-weight: 500;
+    margin-top: 1.06667rem;
+    padding-bottom: 1.06667rem;
+    text-transform: uppercase; }
+    .post-meta a + time:before {
+      content: "";
+      background: #d4d4d4;
+      display: inline-block;
+      height: 3px;
+      margin: 0 8px;
+      width: 3px;
+      vertical-align: middle;
+      border-radius: 50%; }
+  .post-tag {
+    margin: 0; }
+    .post-tag > li {
+      display: inline-block;
+      padding: 0; }
+      .post-tag > li a {
+        background: #f1f1f1;
+        border-radius: 2px;
+        color: #6c7175;
+        font-size: 0.77248rem;
+        display: inline-block;
+        margin: 0 0.26667rem 0.26667rem 0;
+        padding: 0.26667rem 0.53333rem; }
+        .post-tag > li a:hover {
+          background: #039be5;
+          color: #ffffff;
+          text-decoration: none; }
+  .post-share {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 1.6rem;
+    width: 100%; }
+    .post-share amp-social-share {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+      background-size: 24px; }
+  .post-scroll {
+    color: #ffffff;
+    background: #039be5;
+    bottom: 10px;
+    border-radius: 50%;
+    border: none;
+    -webkit-box-shadow: 0 1px 1.5px 0 rgba(38, 38, 38, 0.12), 0 1px 1px 0 rgba(38, 38, 38, 0.24);
+    box-shadow: 0 1px 1.5px 0 rgba(38, 38, 38, 0.12), 0 1px 1px 0 rgba(38, 38, 38, 0.24);
+    font-size: 1.13778rem;
+    height: 46px;
+    opacity: 0;
+    outline: none;
+    position: fixed;
+    padding: 0;
+    right: 4%;
+    visibility: hidden;
+    width: 46px;
+    z-index: 9999; }
+    .post-scroll-marker {
+      height: 0px;
+      position: absolute;
+      top: 100px;
+      width: 0px; }
+        .post-pagination {
+    background: #f1f1f1;
+    -webkit-box-shadow: inset 0 2px 3px rgba(38, 38, 38, 0.1);
+    box-shadow: inset 0 2px 3px rgba(38, 38, 38, 0.1);
+    border-top: 1px solid #d4d4d4;
+    padding: 1.06667rem 0; }
+    .post-pagination > div {
+      line-height: 1.2;
+      padding: 0.53333rem 1.06667rem;
+      text-align: center; }
+      .post-pagination > div span {
+        display: block;
+        color: #6c7175;
+        font-size: 0.7242rem;
+        font-weight: 500;
+        margin-bottom: 0.26667rem;
+        text-transform: uppercase; }
+    .post-pagination-prev a:before {
+      content: "\2190";
+      margin-right: 0.26667rem; }
+    .post-pagination-next a:after {
+      content: "\2192";
+      margin-left: 0.26667rem; }
+
+aside {
+  margin: 1.6rem 0 0; }
+
+.align-left {
+  text-align: left; }
+
+.align-right {
+  text-align: right; }
+
+.align-center {
+  text-align: center; }
+
+.align-justify {
+  text-align: justify; }
+
+.msg {
+  border-left: 2px solid transparent;
+  padding: 1.06667rem 1.06667rem; }
+  .msg--highlight {
+    background-color: #fff8e6;
+    border-color: #e2ac4f; }
+  .msg--info {
+    background: rgba(45, 97, 201, 0.03);
+    border-color: #039be5; }
+  .msg--success {
+    background: #f7fbf6;
+    border-color: #5ab44b; }
+  .msg--warning {
+    background: #fff3f3;
+    border-color: #c06367;
+    color: #a94442; }
+
+.dropcap:first-letter {
+  float: left;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 2.16943rem;
+  line-height: 0.7;
+  margin-right: 0.53333rem;
+  padding: 0.53333rem 0.53333rem 0.53333rem 0; }
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0.8rem 0; }
+  .pagination > a {
+    padding-left: 0;
+    padding-right: 0;
+    width: 49%; }
+  .pagination-right {
+    margin-left: auto; }
+
+.bottom {
+  background: #039be5;
+  color: #ffffff;
+  padding: 1.06667rem 4%;
+  text-align: center; }
+
+    /*
+ * Put your custom CSS code here (it will be used only in AMP mode)
+ */</style><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><script async src="https://cdn.ampproject.org/v0.js"></script><script custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js" async></script><script custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js" async></script></head><body class="bg-white"><nav class="navbar wrap-inner" id="top"><div><a on="tap:navbar-sidebar.toggle" class="navbar-sidebar-toggle" title="Menu">Menu</a> <a class="logo" href="https://docs.inspireui.com/amp/">InspireUI Blog</a></div></nav><main class="wrap-page"><article class="post"><figure class="post-featured-image"><amp-img src="https://docs.inspireui.com/media/posts/2/1_LDrliTg7HPoSgkQocrrx5w.gif" alt="" height="672" layout="responsive" width="895"></amp-img></figure><div class="wrap-inner"><header class="post-header"><h1>Announcing Fluxstore 1.3</h1><p class="post-meta">By <a href="https://docs.inspireui.com/amp/authors/inspireui/" rel="nofollow" title="InspireUI">InspireUI</a> <time datetime="2019-06-24T16:17">June 24, 2019</time></p></header><div class="ir is it iu iv"><div><h1 id="bc78" class="pw-post-title iw ix iy bm iz ja jb jc jd je jf jg jh ji jj jk jl jm jn jo jp jq jr js jt ju ga" data-selectable-paragraph=""></h1></div><blockquote class="jv jw jx"><p id="4bfe" class="jy jz ka kb b kc kd ke kf kg kh ki kj kk kl km kn ko kp kq kr ks kt ku kv kw ir ga" data-selectable-paragraph=""><em class="iy">Hello from InspireUI, this is our regular update for the detailed changelog guide and roadmap for our product update.</em></p></blockquote><p id="a588" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj lj kl km kn lk kp kq kr ll kt ku kv kw ir ga" data-selectable-paragraph="">At this first July, we continue releasing a new version of the amazing e-commerce Flutter app — Fluxstore v1.3. This version is full of new features compatible with the new Flutter 1.7, including new <strong class="kb iz">Smart Chat</strong>, <strong class="kb iz">Auto Address Fill-in via Map View</strong>, <strong class="kb iz">Discount</strong>, <strong class="kb iz">Dynamic product variant</strong>, <strong class="kb iz">Opencart </strong>full compatibility with Free Rest API included in the download package, many minor UX/UI upgrades, bug fixing, and performance improvements.</p><h1 id="aed5" class="lm ln iy bm lo lp lq lr ls lt lu lv lw lx ly lz ma mb mc md me mf mg mh mi mj ga" data-selectable-paragraph="">Overview:</h1><ol><li id="6b03" class="mk ml iy kb b kc mm kg mn lj mo lk mp ll mq kw mr ms mt mu ga" data-selectable-paragraph="">Opencart integration.</li><li id="ffe4" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw mr ms mt mu ga" data-selectable-paragraph="">SmartChat</li><li id="8afe" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw mr ms mt mu ga" data-selectable-paragraph="">Address Filling via Google Map.</li><li id="21d0" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw mr ms mt mu ga" data-selectable-paragraph="">Dynamic Product Variant</li><li id="2f02" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw mr ms mt mu ga" data-selectable-paragraph="">Onboarding screens and strict Login mode.</li><li id="98ce" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw mr ms mt mu ga" data-selectable-paragraph="">How to migrate to Flutter 1.7</li><li id="ab15" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw mr ms mt mu ga" data-selectable-paragraph="">Performance Tips.</li><li id="0266" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw mr ms mt mu ga" data-selectable-paragraph="">Road map for the next version 1.4.</li></ol></div><div class="o dx na nb id nc" role="separator"> </div><div class="ir is it iu iv"><h1 id="473d" class="lm ln iy bm lo lp nh lr ls lt ni lv lw lx nj lz ma mb nk md me mf nl mh mi mj ga" data-selectable-paragraph="">1. Opencart integration</h1><p id="0466" class="pw-post-body-paragraph jy jz iy kb b kc mm ke kf kg mn ki kj lj nm km kn lk nn kq kr ll no ku kv kw ir ga" data-selectable-paragraph="">If we search google with keyword “<em class="ka">Rest API Opencart</em>”, then we can realize the Opencart does not support fully Rest API and we should purchase the extra expensive API. It’s lucky that Fluxstore comes in with free Opencart API included from the download package.</p><ol><li id="f2bd" class="mk ml iy kb b kc kd kg kh lj np lk nq ll nr kw mr ms mt mu ga" data-selectable-paragraph="">For installing the extension, opening the admin panel, then click <code class="fp ns nt nu nv b">Extensions-&gt;Installer</code>and upload <code class="fp ns nt nu nv b">mstore.ocmod.zip</code></li></ol><figure class="ky kz la lb gx lc gl gm paragraph-image"><div class="ld le do lf ce lg" tabindex="0" role="button"><div class="gl gm nw"><figure class="ce lh li c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*-LRcLNXh-jiR454_QMnQmQ.png 640w, https://miro.medium.com/max/720/1*-LRcLNXh-jiR454_QMnQmQ.png 720w, https://miro.medium.com/max/750/1*-LRcLNXh-jiR454_QMnQmQ.png 750w, https://miro.medium.com/max/786/1*-LRcLNXh-jiR454_QMnQmQ.png 786w, https://miro.medium.com/max/828/1*-LRcLNXh-jiR454_QMnQmQ.png 828w, https://miro.medium.com/max/1100/1*-LRcLNXh-jiR454_QMnQmQ.png 1100w, https://miro.medium.com/max/1400/1*-LRcLNXh-jiR454_QMnQmQ.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*-LRcLNXh-jiR454_QMnQmQ.png" alt="" width="700" height="428" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><p id="a948" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj lj kl km kn lk kp kq kr ll kt ku kv kw ir ga" data-selectable-paragraph="">For more reference about this API document function, please go to <a class="au nx" href="https://opencart-api.now.sh/" rel="noopener ugc nofollow" target="_blank">https://opencart-api.now.sh/</a></p><p id="2d60" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj lj kl km kn lk kp kq kr ll kt ku kv kw ir ga" data-selectable-paragraph="">2. Open the <code class="fp ns nt nu nv b">lib/common/config</code> and change the config to map to your Opencart website:</p><pre class="ky kz la lb gx ny bs nz oa dz nv"><span id="7f96" class="ga ob ln iy nv b dm oc od l oe of" data-selectable-paragraph="">"server": {<br>    "type": "opencart",<br>    "url": "http://opencart-demo.mstore.io",<br>    ...<br>},</span></pre><p id="180d" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj lj kl km kn lk kp kq kr ll kt ku kv kw ir ga" data-selectable-paragraph="">You can also try with the example config file to map to our site from the example folder,`config_opencart.json` and <code class="fp ns nt nu nv b">config_opencart.dart</code>. For more information about the Opencart settings, please refer to this document guide — <a class="au nx" href="https://docs.inspireui.com/fluxstore/opencart-setup/" rel="noopener ugc nofollow" target="_blank">https://docs.inspireui.com/fluxstore/opencart-setup/</a></p></div><div class="o dx na nb id nc" role="separator"> </div><div class="ir is it iu iv"><h1 id="aa04" class="lm ln iy bm lo lp nh lr ls lt ni lv lw lx nj lz ma mb nk md me mf nl mh mi mj ga" data-selectable-paragraph="">2. SmartChat</h1><p id="3422" class="pw-post-body-paragraph jy jz iy kb b kc mm ke kf kg mn ki kj lj nm km kn lk nn kq kr ll no ku kv kw ir ga" data-selectable-paragraph=""><em class="ka">(released on v1.3.5)</em></p><p id="ed46" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj lj kl km kn lk kp kq kr ll kt ku kv kw ir ga" data-selectable-paragraph="">Nothing is worse than customers cannot get help from your business at the right time when they are getting trouble. Worry no more, SmartChat comes to save the day. There are a variety of choices customers can reach your business including using Chat Feature that we have already built or using external apps if your business has already had a support system. When using the Chat Feature, it is easy and convenient for Admin to manage all messages from customers thanks to Chat List feature (only Admin can access to). Besides, attached images are also supported and stored in Firebase Storage. When coming to store the data in the conversation, you may think about the security and efficiency, right? Just relax, Firebase flatform is made by Google, that means, all of your data is totally safe and high-speed accessed.</p><p id="a233" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj lj kl km kn lk kp kq kr ll kt ku kv kw ir ga" data-selectable-paragraph="">As mentioned above, the default option for Chat Feature is using the Firebase. Please follow these steps for the config:</p><ol><li id="edb1" class="mk ml iy kb b kc kd kg kh lj np lk nq ll nr kw mr ms mt mu ga" data-selectable-paragraph="">For adding an Android app to your project: Open the <a class="au nx" href="http://console.firebase.google.com/" rel="noopener ugc nofollow" target="_blank">Firebase Console</a>, follow the assistant from Google Docs, download the generated google-services.json file and place it inside the android app.</li><li id="69a9" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw mr ms mt mu ga" data-selectable-paragraph="">For adding an iOS app to your project: Open the <a class="au nx" href="http://console.firebase.google.com/" rel="noopener ugc nofollow" target="_blank">Firebase Console</a>, follow the assistant from Google Docs, download the generated GoogleService-Info.plist file, open ios/Runner.xcworkspace with Xcode, and place the file inside ios/Runner within Xcode.</li><li id="79e6" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw mr ms mt mu ga" data-selectable-paragraph="">Update the Shop Owner admin email address so that the end-users can reach your business.</li></ol><pre class="ky kz la lb gx ny bs nz oa dz nv"><span id="59b3" class="ga ob ln iy nv b dm oc od l oe of" data-selectable-paragraph=""><strong class="nv iz">/// </strong>file<strong class="nv iz">: </strong>common/config.dart<strong class="nv iz"><br>const </strong>String adminEmail = "admininspireui@gmail.com";</span></pre><p id="7588" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj lj kl km kn lk kp kq kr ll kt ku kv kw ir ga" data-selectable-paragraph="">To control the visibility of the SmartChat feature, you can either remove the unnecessary communication apps or adjust the ‘account’ and ‘phone’ property in URL to meet your business need. Let’s take a look at the SmartChat below for instance:</p><pre class="ky kz la lb gx ny bs nz oa dz nv"><span id="bad0" class="ga ob ln iy nv b dm oc od l oe of" data-selectable-paragraph="">/// file: common/config.dart</span><span id="d852" class="ga ob ln iy nv b dm og od l oe of" data-selectable-paragraph=""><strong class="nv iz">const </strong>smartChat = [<br>{'app': 'whatsapp://send?phone=8499999999', 'iconData': FontAwesomeIcons.<em class="ka">whatsapp</em>},<br>{'app': 'https://m.me/csasonic2', 'iconData': FontAwesomeIcons.<em class="ka">facebookMessenger</em>},<br>{'app': 'tel:8499999999', 'iconData': FontAwesomeIcons.<em class="ka">phone</em>},<br>{'app': 'sms://8499999999', 'iconData': FontAwesomeIcons.<em class="ka">sms</em>}<br>];</span></pre><p id="490d" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj lj kl km kn lk kp kq kr ll kt ku kv kw ir ga" data-selectable-paragraph="">List of available supported chat apps: Whatsapp, Viber, Facebook Messenger, iMessage, ….The smart chat is also flexible to change the app scheme to open as an external app.</p></div><div class="o dx na nb id nc" role="separator"> </div><div class="ir is it iu iv"><h1 id="0057" class="lm ln iy bm lo lp nh lr ls lt ni lv lw lx nj lz ma mb nk md me mf nl mh mi mj ga" data-selectable-paragraph="">3. Address Filling via Google Map.</h1><figure class="ky kz la lb gx lc gl gm paragraph-image"><div class="ld le do lf ce lg" tabindex="0" role="button"><div class="gl gm oh"><figure class="ce lh li c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*LDrliTg7HPoSgkQocrrx5w.gif 640w, https://miro.medium.com/max/720/1*LDrliTg7HPoSgkQocrrx5w.gif 720w, https://miro.medium.com/max/750/1*LDrliTg7HPoSgkQocrrx5w.gif 750w, https://miro.medium.com/max/786/1*LDrliTg7HPoSgkQocrrx5w.gif 786w, https://miro.medium.com/max/828/1*LDrliTg7HPoSgkQocrrx5w.gif 828w, https://miro.medium.com/max/1100/1*LDrliTg7HPoSgkQocrrx5w.gif 1100w, https://miro.medium.com/max/1400/1*LDrliTg7HPoSgkQocrrx5w.gif 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*LDrliTg7HPoSgkQocrrx5w.gif" alt="" width="700" height="526" loading="eager" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div><figcaption class="oi bl gn gl gm oj ok bm b bn bo cn" data-selectable-paragraph="">Address fill in</figcaption></figure><p id="cfb7" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj lj kl km kn lk kp kq kr ll kt ku kv kw ir ga" data-selectable-paragraph="">Get an API key at <a class="au nx" href="https://cloud.google.com/maps-platform/" rel="noopener ugc nofollow" target="_blank">https://cloud.google.com/maps-platform/</a> if you haven’t got one.</p><p id="7e4d" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj lj kl km kn lk kp kq kr ll kt ku kv kw ir ga" data-selectable-paragraph="">Open the <code class="fp ns nt nu nv b">lib/common/config.dart</code> and replace your own key:</p><pre class="ky kz la lb gx ny bs nz oa dz nv"><span id="a8e3" class="ga ob ln iy nv b dm oc od l oe of" data-selectable-paragraph=""><strong class="nv iz">const </strong>kGoogleAPIKey = {<br>  "android": "your-google-api-key",<br>  "ios": "your-google-api-key"<br>};</span></pre><p id="912c" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj lj kl km kn lk kp kq kr ll kt ku kv kw ir ga" data-selectable-paragraph="">Open <code class="fp ns nt nu nv b">ios/Runner/AppDelegate.m</code> and replace your own key:</p><pre class="ky kz la lb gx ny bs nz oa dz nv"><span id="365a" class="ga ob ln iy nv b dm oc od l oe of" data-selectable-paragraph="">[GMSServices provideAPIKey:<strong class="nv iz">@</strong>"your-google-api-key"];</span></pre><p id="8d1f" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj lj kl km kn lk kp kq kr ll kt ku kv kw ir ga" data-selectable-paragraph="">Open <code class="fp ns nt nu nv b">android/app/src/main/AndroidManifest.xml</code>: and replace your own key:</p><pre class="ky kz la lb gx ny bs nz oa dz nv"><span id="7056" class="ga ob ln iy nv b dm oc od l oe of" data-selectable-paragraph="">&lt;meta-data android:name="com.google.android.geo.API_KEY"<br>    android:value="your-google-api-key"/&gt;</span></pre><p id="3660" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj lj kl km kn lk kp kq kr ll kt ku kv kw ir ga" data-selectable-paragraph="">To protect your key, log in to <a class="au nx" href="https://console.cloud.google.com/apis/credentials/key" rel="noopener ugc nofollow" target="_blank">https://console.cloud.google.com/apis/credentials/key</a> and manage the restrictions per-app bundle id:</p><figure class="ky kz la lb gx lc gl gm paragraph-image"><div class="ld le do lf ce lg" tabindex="0" role="button"><div class="gl gm ol"><figure class="ce lh li c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*quRG4AZbjXET8RSQOm47Ng.png 640w, https://miro.medium.com/max/720/1*quRG4AZbjXET8RSQOm47Ng.png 720w, https://miro.medium.com/max/750/1*quRG4AZbjXET8RSQOm47Ng.png 750w, https://miro.medium.com/max/786/1*quRG4AZbjXET8RSQOm47Ng.png 786w, https://miro.medium.com/max/828/1*quRG4AZbjXET8RSQOm47Ng.png 828w, https://miro.medium.com/max/1100/1*quRG4AZbjXET8RSQOm47Ng.png 1100w, https://miro.medium.com/max/1400/1*quRG4AZbjXET8RSQOm47Ng.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*quRG4AZbjXET8RSQOm47Ng.png" alt="" width="700" height="547" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure></div><div class="o dx na nb id nc" role="separator"> </div><div class="ir is it iu iv"><h1 id="7bd2" class="lm ln iy bm lo lp nh lr ls lt ni lv lw lx nj lz ma mb nk md me mf nl mh mi mj ga" data-selectable-paragraph="">4. Dynamic Product Variant</h1><figure class="ky kz la lb gx lc gl gm paragraph-image"><div class="ld le do lf ce lg" tabindex="0" role="button"><div class="gl gm om"><figure class="ce lh li c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*1vjMwVre9m1i0WPWtkEQ2w.png 640w, https://miro.medium.com/max/720/1*1vjMwVre9m1i0WPWtkEQ2w.png 720w, https://miro.medium.com/max/750/1*1vjMwVre9m1i0WPWtkEQ2w.png 750w, https://miro.medium.com/max/786/1*1vjMwVre9m1i0WPWtkEQ2w.png 786w, https://miro.medium.com/max/828/1*1vjMwVre9m1i0WPWtkEQ2w.png 828w, https://miro.medium.com/max/1100/1*1vjMwVre9m1i0WPWtkEQ2w.png 1100w, https://miro.medium.com/max/1400/1*1vjMwVre9m1i0WPWtkEQ2w.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*1vjMwVre9m1i0WPWtkEQ2w.png" alt="" width="700" height="1257" loading="eager" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><p id="fe18" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj lj kl km kn lk kp kq kr ll kt ku kv kw ir ga" data-selectable-paragraph="">Open <code class="fp ns nt nu nv b">common/config.dart</code> to custom the products variant values or order the display position.</p><pre class="ky kz la lb gx ny bs nz oa dz nv"><span id="3435" class="ga ob ln iy nv b dm oc od l oe of" data-selectable-paragraph=""><strong class="nv iz">const </strong>ProductVariantLayout = {<br>  "color": "color",<br>  "size": "box",<br>  "height": "option",<br>};</span></pre><ul><li id="a277" class="mk ml iy kb b kc kd kg kh lj np lk nq ll nr kw on ms mt mu ga" data-selectable-paragraph=""><code class="fp ns nt nu nv b">key</code>: should be matched with the variant key name, example: color, size, height, weight…</li><li id="5455" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw on ms mt mu ga" data-selectable-paragraph=""><code class="fp ns nt nu nv b">value</code>: support 3 types of layout <code class="fp ns nt nu nv b">color (circle with multi color)</code>, <code class="fp ns nt nu nv b">box(the rectangle box)</code>and <code class="fp ns nt nu nv b">option (the dropdown selection)</code></li></ul><p id="e751" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj lj kl km kn lk kp kq kr ll kt ku kv kw ir ga" data-selectable-paragraph="">There is feedback from one of our customers to adjust the product detail design screen. He reported that the default detail screen just matched with the Fashion UI so the team has made some upgrade to make the product detail more flexible by below config</p><pre class="ky kz la lb gx ny bs nz oa dz nv"><span id="dab1" class="ga ob ln iy nv b dm oc od l oe of" data-selectable-paragraph=""><strong class="nv iz">const </strong>kProductDetail = {<br>  "height": 1.2,<br>  "marginTop": 0,<br>  "isHero": <strong class="nv iz">false</strong>,<br>};</span></pre><ul><li id="ddea" class="mk ml iy kb b kc kd kg kh lj np lk nq ll nr kw on ms mt mu ga" data-selectable-paragraph=""><code class="fp ns nt nu nv b">height</code> the percent height of the featured product images.</li><li id="92af" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw on ms mt mu ga" data-selectable-paragraph=""><code class="fp ns nt nu nv b">marginTop</code> the top margin with the top edge. This setting to prevent the product detail screen from being cropped without using SafeArea widget.</li><li id="9f72" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw on ms mt mu ga" data-selectable-paragraph=""><code class="fp ns nt nu nv b">isHero</code> option to enable the <a class="au nx" href="https://flutter.dev/docs/development/ui/animations/hero-animations" rel="noopener ugc nofollow" target="_blank">hero animate</a>.</li></ul></div><div class="o dx na nb id nc" role="separator"> </div><div class="ir is it iu iv"><h1 id="dff1" class="lm ln iy bm lo lp nh lr ls lt ni lv lw lx nj lz ma mb nk md me mf nl mh mi mj ga" data-selectable-paragraph="">5. Onboarding screens and strict Login mode.</h1><p id="cf51" class="pw-post-body-paragraph jy jz iy kb b kc mm ke kf kg mn ki kj lj nm km kn lk nn kq kr ll no ku kv kw ir ga" data-selectable-paragraph="">To customize the onboarding content (the welcome screen), edit the file <code class="fp ns nt nu nv b">common/config.dart</code></p><pre class="ky kz la lb gx ny bs nz oa dz nv"><span id="4896" class="ga ob ln iy nv b dm oc od l oe of" data-selectable-paragraph="">List onBoardingData = [<br>  {<br>    "title": "Welcome to FluxStore",<br>    "image": "assets/images/fogg-delivery-1.png",<br>    "desc": "Fluxstore is on the way to serve you. "<br>  },<br>  {<br>    "title": "Connect Surrounding World",<br>    "image": "assets/images/fogg-uploading-1.png",<br>    "desc": "See all things happening around you just by a click in your phone. Fast, convenient and clean."<br>  },<br>  {<br>    "title": "Let's Get Started",<br>    "image": "fogg-order-completed.png",<br>    "desc": "Waiting no more, let's see what we get!"<br>  },<br>];</span></pre><p id="b491" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj lj kl km kn lk kp kq kr ll kt ku kv kw ir ga" data-selectable-paragraph="">There is also a new feature to strict user login before using the app by enabling `IsRequiredLogin`</p><pre class="ky kz la lb gx ny bs nz oa dz nv"><span id="04d2" class="ga ob ln iy nv b dm oc od l oe of" data-selectable-paragraph=""><strong class="nv iz">const </strong>bool IsRequiredLogin = <strong class="nv iz">false</strong>;</span></pre></div><div class="o dx na nb id nc" role="separator"> </div><div class="ir is it iu iv"><h1 id="605e" class="lm ln iy bm lo lp nh lr ls lt ni lv lw lx nj lz ma mb nk md me mf nl mh mi mj ga" data-selectable-paragraph="">6. How to migrate to Flutter 1.7</h1><p id="5880" class="pw-post-body-paragraph jy jz iy kb b kc mm ke kf kg mn ki kj lj nm km kn lk nn kq kr ll no ku kv kw ir ga" data-selectable-paragraph="">New FluxStore 1.3 is fully compatible with the latest 1.7 version Fluter. To upgrade new Flutter version try to run</p><pre class="ky kz la lb gx ny bs nz oa dz nv"><span id="0b32" class="ga ob ln iy nv b dm oc od l oe of" data-selectable-paragraph="">flutter upgrade</span></pre><p id="4f5b" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj lj kl km kn lk kp kq kr ll kt ku kv kw ir ga" data-selectable-paragraph="">Please read this post for more detail about this upgrade <a class="au nx" rel="noopener" href="https://medium.com/flutter/announcing-flutter-1-7-9cab4f34eacf">https://medium.com/flutter/announcing-flutter-1-7-9cab4f34eacf</a></p><p id="20c1" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj lj kl km kn lk kp kq kr ll kt ku kv kw ir ga" data-selectable-paragraph="">Make sure to change the XCode project <code class="fp ns nt nu nv b">File</code>, <code class="fp ns nt nu nv b">Workspace Settings</code>, <code class="fp ns nt nu nv b">New Build System</code></p><figure class="ky kz la lb gx lc gl gm paragraph-image"><div class="ld le do lf ce lg" tabindex="0" role="button"><div class="gl gm oo"><figure class="ce lh li c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*JxatgADc0xlRRoUsAGeH7w.png 640w, https://miro.medium.com/max/720/1*JxatgADc0xlRRoUsAGeH7w.png 720w, https://miro.medium.com/max/750/1*JxatgADc0xlRRoUsAGeH7w.png 750w, https://miro.medium.com/max/786/1*JxatgADc0xlRRoUsAGeH7w.png 786w, https://miro.medium.com/max/828/1*JxatgADc0xlRRoUsAGeH7w.png 828w, https://miro.medium.com/max/1100/1*JxatgADc0xlRRoUsAGeH7w.png 1100w, https://miro.medium.com/max/1400/1*JxatgADc0xlRRoUsAGeH7w.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*JxatgADc0xlRRoUsAGeH7w.png" alt="" width="700" height="560" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><p id="983a" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj lj kl km kn lk kp kq kr ll kt ku kv kw ir ga" data-selectable-paragraph="">If you have some error with new flutter</p><ul><li id="69fe" class="mk ml iy kb b kc kd kg kh lj np lk nq ll nr kw on ms mt mu ga" data-selectable-paragraph="">Try to run this script from the <code class="fp ns nt nu nv b">ios</code> folder:</li></ul><pre class="ky kz la lb gx ny bs nz oa dz nv"><span id="12fd" class="ga ob ln iy nv b dm oc od l oe of" data-selectable-paragraph="">pod deintegrate<br>pod update</span></pre><ul><li id="bc19" class="mk ml iy kb b kc kd kg kh lj np lk nq ll nr kw on ms mt mu ga" data-selectable-paragraph="">Go to the project folder and restart the flutter project by Android Studio, or run</li></ul><pre class="ky kz la lb gx ny bs nz oa dz nv"><span id="9efc" class="ga ob ln iy nv b dm oc od l oe of" data-selectable-paragraph="">flutter run</span><span id="bd39" class="ga ob ln iy nv b dm og od l oe of" data-selectable-paragraph="">/// you can also check this script to find out issue<br>flutter doctor</span></pre></div><div class="o dx na nb id nc" role="separator"> </div><div class="ir is it iu iv"><h1 id="8feb" class="lm ln iy bm lo lp nh lr ls lt ni lv lw lx nj lz ma mb nk md me mf nl mh mi mj ga" data-selectable-paragraph="">7. Performance Tips</h1><p id="1635" class="pw-post-body-paragraph jy jz iy kb b kc mm ke kf kg mn ki kj lj nm km kn lk nn kq kr ll no ku kv kw ir ga" data-selectable-paragraph="">Below tips have been checked and verified by the Flutter Performance tools from the Android Studio, so now just try on your own. We highly recommend:</p><ul><li id="677a" class="mk ml iy kb b kc kd kg kh lj np lk nq ll nr kw on ms mt mu ga" data-selectable-paragraph="">Replace <code class="fp ns nt nu nv b">ListView</code> by <code class="fp ns nt nu nv b">SingleChildScrollView</code> and <code class="fp ns nt nu nv b">Column</code> for some persistence list widget, for example, the horizontal list from the Fluxstore homepage.</li><li id="581d" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw on ms mt mu ga" data-selectable-paragraph="">Replace <code class="fp ns nt nu nv b">Card</code> widget by <code class="fp ns nt nu nv b">Container</code></li><li id="9256" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw on ms mt mu ga" data-selectable-paragraph="">Remove all child <code class="fp ns nt nu nv b">Material</code> widget, just keep one for the parent widget as it will hugely impact your app, some open-source library from <a class="au nx" href="https://pub.dev/flutter" rel="noopener ugc nofollow" target="_blank">https://pub.dev/flutter</a> still have this performance issue.</li><li id="57c9" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw on ms mt mu ga" data-selectable-paragraph="">didChangeDependencies function will cause multi render and unuse resource, we suggest to use the <code class="fp ns nt nu nv b">after_layout</code> library instead.</li><li id="83ee" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw on ms mt mu ga" data-selectable-paragraph="">AutomaticKeepAliveClientMixin prevents the render from switching to other tabs.</li><li id="4df8" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw on ms mt mu ga" data-selectable-paragraph="">Use AsyncMemoizer and <code class="fp ns nt nu nv b">StateFull</code> widget when using<code class="fp ns nt nu nv b">FutureBuilder</code></li></ul></div><div class="o dx na nb id nc" role="separator"> </div><div class="ir is it iu iv"><h1 id="7d61" class="lm ln iy bm lo lp nh lr ls lt ni lv lw lx nj lz ma mb nk md me mf nl mh mi mj ga" data-selectable-paragraph="">8. Road map for the next version 1.4.</h1><p id="8bc9" class="pw-post-body-paragraph jy jz iy kb b kc mm ke kf kg mn ki kj lj nm km kn lk nn kq kr ll no ku kv kw ir ga" data-selectable-paragraph="">Here is our road map for next version release:</p><ul><li id="bf0f" class="mk ml iy kb b kc kd kg kh lj np lk nq ll nr kw on ms mt mu ga" data-selectable-paragraph="">Upgrade the payment solution for Magento and Opencart.</li><li id="80a8" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw on ms mt mu ga" data-selectable-paragraph="">Support add new rating and comments.</li><li id="317d" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw on ms mt mu ga" data-selectable-paragraph="">Add more blog layouts &amp; support comments</li><li id="cffa" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw on ms mt mu ga" data-selectable-paragraph="">Work on UX improvements.</li><li id="736f" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw on ms mt mu ga" data-selectable-paragraph="">Support Guest checkout.</li><li id="ee90" class="mk ml iy kb b kc mv kg mw lj mx lk my ll mz kw on ms mt mu ga" data-selectable-paragraph="">Upgrade the Product detail with Video or 360 views.</li></ul><p id="16e7" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj lj kl km kn lk kp kq kr ll kt ku kv kw ir ga" data-selectable-paragraph="">Thank you so much for your time spending on our blog</p></div><aside><ul class="post-tag"><li><a href="https://docs.inspireui.com/amp/tags/fluxstore/">FluxStore</a></li></ul><div class="post-share"><amp-social-share type="system" width="40" height="40" data-param-text="Announcing Fluxstore 1.3"></amp-social-share><amp-social-share type="facebook" width="40" height="40" data-param-app_id="" data-param-text="Announcing Fluxstore 1.3" data-param-href="https://docs.inspireui.com/amp/announcing-fluxstore-13/"></amp-social-share><amp-social-share type="twitter" width="40" height="40" data-param-text="Announcing Fluxstore 1.3" data-param-url="https://docs.inspireui.com/amp/announcing-fluxstore-13/"></amp-social-share><amp-social-share type="pinterest" width="40" height="40" data-param-url="https://docs.inspireui.com/amp/announcing-fluxstore-13/"></amp-social-share><amp-social-share type="tumblr" width="40" height="40" data-param-text="Announcing Fluxstore 1.3" data-param-url="https://docs.inspireui.com/amp/announcing-fluxstore-13/"></amp-social-share><amp-social-share type="whatsapp" width="40" height="40" data-param-text="Announcing Fluxstore 1.3" data-param-url="https://docs.inspireui.com/amp/announcing-fluxstore-13/"></amp-social-share></div></aside></div></article></main><amp-animation id="showAnim" layout="nodisplay"><script type="application/json">{
+                    "duration": "200ms",
+                    "fill": "both",
+                    "iterations": "1",
+                    "direction": "alternate",
+                    "animations": [{
+                        "selector": ".post-scroll",
+                        "keyframes": [{
+                            "opacity": "1",
+                            "visibility": "visible",
+                            "transform": "scale(1)"
+                        }]
+                    }]
+                }</script></amp-animation><amp-animation id="hideAnim" layout="nodisplay"><script type="application/json">{
+                    "duration": "200ms",
+                    "fill": "both",
+                    "iterations": "1",
+                    "direction": "alternate",
+                    "animations": [{
+                        "selector": ".post-scroll",
+                        "keyframes": [{
+                            "opacity": "0",
+                            "visibility": "hidden",
+                            "transform": "scale(0.1)"
+                        }]
+                    }]
+                }</script></amp-animation><div class="post-scroll-marker"><amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay"></amp-position-observer></div><button class="post-scroll" on="tap:top.scrollTo(duration=200)">&#8593;</button><footer class="bottom">Powered by Publii</footer><amp-sidebar id="navbar-sidebar" layout="nodisplay"><ul><li><a href="https://inspireui.com" title="InspireUI Home">Home</a></li><li><a href="https://docs.inspireui.com/amp/" title="Blog">Blog</a></li><li><a href="https://inspireui.com/products" title="Products">Products</a></li><li><a href="https://inspireui.com/about/" title="About Us">About Us</a></li><li><a href="https://support.inspireui.com" title="Support">Support</a></li></ul></amp-sidebar></body></html>

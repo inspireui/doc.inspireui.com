@@ -1,0 +1,590 @@
+<!doctype html><html amp lang="en-gb"><head><meta charset="utf-8"><title>How to build the Flutter Instant App - InspireUI Blog</title><meta name="description" content="Imagine how great it would be if you could try out apps without even installing them. Yes, you can make&hellip;"><link rel="canonical" href="https://docs.inspireui.com/how-to-build-the-flutter-instant-app/"><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" type="text/css"><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.inspireui.com/amp/how-to-build-the-flutter-instant-app/"},"headline":"How to build the Flutter Instant App","datePublished":"2000-11-02T14:57","dateModified":"2022-11-02T16:09","image":{"@type":"ImageObject","url":"https://docs.inspireui.com/media/posts/7/1_Sk-iUeIOWpGmO53yq0A5Sw-1.jpeg","height":711,"width":1400},"description":"Imagine how great it would be if you could try out apps without even installing them. Yes, you can make&hellip;","author":{"@type":"Person","name":"InspireUI","url":"https://docs.inspireui.com/amp/authors/inspireui/"},"publisher":{"@type":"Organization","name":"InspireUI","logo":{"@type":"ImageObject","url":"https://docs.inspireui.com/media/website/inspireui-icon2x-1.png","height":119,"width":374}}}</script><style amp-custom>article,
+aside,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+amp-img {
+  max-width: 100%; }
+
+button,
+input,
+select,
+textarea {
+  font: inherit; }
+
+html {
+  font-size: 1rem; }
+
+body {
+  background: #f1f1f1;
+  color: #262626;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.6; }
+
+a {
+  color:  #039be5;
+  text-decoration: none;
+  -webkit-transition: all 0.12s linear 0s;
+  -o-transition: all 0.12s linear 0s;
+  transition: all 0.12s linear 0s; }
+
+a:hover {
+  color: #262626;
+  text-decoration: underline;
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip: ink; }
+
+a:active {
+  color: #262626; }
+
+a:focus {
+  outline: 2px dotted #039be5; }
+
+figure,
+blockquote,
+p,
+ul,
+ol,
+dl,
+table,
+hr,
+fieldset {
+  margin-top: 1.6rem; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #262626;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 2.13333rem; }
+
+h1 {
+  font-size: 1.67583rem;
+  font-weight: normal; }
+
+h2 {
+  font-size: 1.4729rem; }
+
+h3 {
+  font-size: 1.29454rem; }
+
+h4 {
+  font-size: 1.13778rem; }
+
+h5 {
+  font-size: 1rem; }
+
+h6 {
+  font-size: 0.87891rem; }
+
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+  margin-top: 0.8rem; }
+
+b,
+strong {
+  font-weight: 600; }
+
+blockquote {
+  color: #6c7175;
+  font-family: "Droid Serif", "Times", "Source Serif Pro", serif;
+  font-style: italic;
+  padding: 1.33333rem 0.53333rem 1.33333rem 3.2rem;
+  position: relative; }
+  blockquote:before {
+    display: block;
+    content: "\201C";
+    font-size: 4.41226rem;
+    position: absolute;
+    left: 0;
+    top: -12px;
+    color: rgba(108, 113, 117, 0.5); }
+  blockquote > :nth-child(1) {
+    margin-top: 0; }
+
+ul,
+ol {
+  margin-left: 2rem; }
+  ul > li,
+  ol > li {
+    list-style: inherit;
+    padding: 0 0 0.26667rem 0.26667rem; }
+
+dl dt {
+  color: #262626;
+  font-weight: 600; }
+
+code,
+pre {
+  background-color: #f1f1f1;
+  font-family: monospace; }
+
+pre {
+  margin: 1.6rem 0 0;
+  padding: 1.6rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto; }
+  pre > code {
+    color: #262626;
+    padding: 0; }
+
+code {
+  border-radius: 3px;
+  color: #262626;
+  padding: 0.26667rem 0.53333rem; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #d4d4d4;
+  width: 100%;
+  overflow-x: auto;
+  vertical-align: top;
+  text-align: left;
+  white-space: nowrap; }
+  table th {
+    font-weight: 500;
+    padding: 0.53333rem 1.06667rem; }
+  table tr {
+    border-bottom: 1px solid #d4d4d4; }
+    table tr:nth-child(2n) {
+      background: #f1f1f1; }
+  table td {
+    padding: 0.53333rem 1.06667rem; }
+
+figcaption {
+  clear: both;
+  color: rgba(108, 113, 117, 0.6);
+  font-size: 0.82397rem;
+  margin: 0.8rem 0 0;
+  text-align: center; }
+
+sub,
+sup {
+  font-size: 65%; }
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+
+.btn, [type=button],
+[type=submit],
+button {
+  background: #039be5;
+  border: none;
+  border-radius: 2px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.87891rem;
+  font-weight: 500;
+  line-height: 1.9;
+  padding: 0.53333rem 1.33333rem;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all .15s ease;
+  -o-transition: all .15s ease;
+  transition: all .15s ease;
+  width: auto; }
+  .btn:hover, [type=button]:hover,
+  [type=submit]:hover,
+  button:hover {
+    background: #262626;
+    color: #ffffff; }
+  .btn:focus, [type=button]:focus,
+  [type=submit]:focus,
+  button:focus {
+    outline: none; }
+  .btn-outline {
+    border: 1px solid #ddd;
+    background: #ffffff;
+    border-radius: 3px;
+    color: #262626; }
+
+[type=button],
+[type=submit],
+button {
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+.navbar {
+  background: #039be5;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  line-height: 3;
+  max-height: 4rem; }
+  .navbar > div {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto; }
+  .navbar a {
+    color: #ffffff;
+    text-decoration: none; }
+  .navbar-sidebar-toggle {
+    left: 0;
+    position: relative;
+    text-indent: -99999rem; }
+    .navbar-sidebar-toggle:before {
+      content: "";
+      display: block;
+      border-top: 0.375rem double #ffffff;
+      border-bottom: 0.125rem solid #ffffff;
+      height: 0.125rem;
+      position: absolute;
+      text-indent: 0;
+      top: 50%;
+      width: 1.3rem;
+      -webkit-transform: translate(0px, -50%);
+      -ms-transform: translate(0px, -50%);
+      transform: translate(0px, -50%); }
+
+
+.logo {
+                    background-image: url('https://docs.inspireui.com/media/website/inspireui-icon2x-1.png');
+                    background-size: auto 2rem;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+            display: inline-block;
+  font-weight: 600;
+  line-height: 1;
+            margin: 0 auto;
+            height: 2rem;
+            text-indent: -9999px;
+            width: 240px;vertical-align: middle;
+        }
+        .logo.logo-text {
+            line-height: 2;
+            text-align: center;
+            text-indent: 0;
+        }
+
+amp-sidebar {
+  background: #ffffff;
+  width: 240px; }
+  amp-sidebar > ul {
+    margin: 0.8rem 0 0;
+    padding: 0; }
+    amp-sidebar > ul ul {
+      border-left: 1px solid #d4d4d4;
+      margin: 0.53333rem 0 0; }
+    amp-sidebar > ul li {
+      color: #262626;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      list-style: none;
+      line-height: 1.4;
+      padding: 0.42667rem 1.06667rem; }
+      amp-sidebar > ul li li {
+        font-weight: normal;
+        padding: 0.26667rem 0 0.26667rem 1.06667rem; }
+    amp-sidebar > ul a,
+    amp-sidebar > ul a:visited {
+      color: #262626; }
+
+.bg-white {
+  background: #ffffff; }
+
+.wrap-page {
+  max-width: 700px;
+  margin: 0 auto; }
+
+@media all and (max-width: 43.6875em) {
+  .wrap-inner {
+    padding: 0 6%; } }
+
+.page-title {
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  margin-bottom: 0.8rem;
+  padding: 1.6rem 6%; }
+  .page-title > h1 {
+    margin: 0;
+    font-size: 1.29454rem; }
+  .page-title > p {
+    font-size: 0.87891rem;
+    color: #6c7175;
+    line-height: 1.3;
+    margin: 0.26667rem 0 0; }
+  .page-title-author {
+    border-radius: 50%;
+    float: left;
+    height: 2.5rem;
+    width: 2.5rem; }
+    .page-title-author + h1 {
+      margin-left: 3.5rem; }
+      .page-title-author + h1 + p {
+        margin-left: 3.5rem; }
+
+.card {
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  margin-bottom: 0.8rem;
+  padding-bottom: 1.06667rem; }
+
+  .card-meta {
+    border-top: 1px solid #d4d4d4;
+    color: rgba(108, 113, 117, 0.6);
+    font-size: 0.7242rem;
+    font-weight: 500;
+    margin-top: 1.06667rem;
+    padding-top: 1.06667rem;
+    text-transform: uppercase; }
+    .card-meta a + time:before {
+      content: "";
+      background: #d4d4d4;
+      display: inline-block;
+      height: 3px;
+      margin: 0 8px;
+      width: 3px;
+      vertical-align: middle;
+      border-radius: 50%; }
+  .card-text {
+    font-size: 0.9375rem;
+    overflow: hidden;
+    padding: 0 6%; }
+    .card-text h2 {
+      font-size: 1.13778rem; }
+
+.post {
+  margin-bottom: 2.13333rem; }
+  .post-featured-image {
+    margin-top: 0;
+    position: relative; }
+    .post-featured-image > figcaption {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 3px;
+      color: #ffffff;
+      position: absolute;
+      bottom: 0.8rem;
+      padding: 0 0.26667rem;
+      right: 6%; }
+  .post-header {
+    margin-bottom: 2.13333rem; }
+  .post-meta {
+    border-bottom: 1px solid #d4d4d4;
+    color: rgba(108, 113, 117, 0.6);
+    font-size: 0.7242rem;
+    font-weight: 500;
+    margin-top: 1.06667rem;
+    padding-bottom: 1.06667rem;
+    text-transform: uppercase; }
+    .post-meta a + time:before {
+      content: "";
+      background: #d4d4d4;
+      display: inline-block;
+      height: 3px;
+      margin: 0 8px;
+      width: 3px;
+      vertical-align: middle;
+      border-radius: 50%; }
+  .post-tag {
+    margin: 0; }
+    .post-tag > li {
+      display: inline-block;
+      padding: 0; }
+      .post-tag > li a {
+        background: #f1f1f1;
+        border-radius: 2px;
+        color: #6c7175;
+        font-size: 0.77248rem;
+        display: inline-block;
+        margin: 0 0.26667rem 0.26667rem 0;
+        padding: 0.26667rem 0.53333rem; }
+        .post-tag > li a:hover {
+          background: #039be5;
+          color: #ffffff;
+          text-decoration: none; }
+  .post-share {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 1.6rem;
+    width: 100%; }
+    .post-share amp-social-share {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+      background-size: 24px; }
+  .post-scroll {
+    color: #ffffff;
+    background: #039be5;
+    bottom: 10px;
+    border-radius: 50%;
+    border: none;
+    -webkit-box-shadow: 0 1px 1.5px 0 rgba(38, 38, 38, 0.12), 0 1px 1px 0 rgba(38, 38, 38, 0.24);
+    box-shadow: 0 1px 1.5px 0 rgba(38, 38, 38, 0.12), 0 1px 1px 0 rgba(38, 38, 38, 0.24);
+    font-size: 1.13778rem;
+    height: 46px;
+    opacity: 0;
+    outline: none;
+    position: fixed;
+    padding: 0;
+    right: 4%;
+    visibility: hidden;
+    width: 46px;
+    z-index: 9999; }
+    .post-scroll-marker {
+      height: 0px;
+      position: absolute;
+      top: 100px;
+      width: 0px; }
+        .post-pagination {
+    background: #f1f1f1;
+    -webkit-box-shadow: inset 0 2px 3px rgba(38, 38, 38, 0.1);
+    box-shadow: inset 0 2px 3px rgba(38, 38, 38, 0.1);
+    border-top: 1px solid #d4d4d4;
+    padding: 1.06667rem 0; }
+    .post-pagination > div {
+      line-height: 1.2;
+      padding: 0.53333rem 1.06667rem;
+      text-align: center; }
+      .post-pagination > div span {
+        display: block;
+        color: #6c7175;
+        font-size: 0.7242rem;
+        font-weight: 500;
+        margin-bottom: 0.26667rem;
+        text-transform: uppercase; }
+    .post-pagination-prev a:before {
+      content: "\2190";
+      margin-right: 0.26667rem; }
+    .post-pagination-next a:after {
+      content: "\2192";
+      margin-left: 0.26667rem; }
+
+aside {
+  margin: 1.6rem 0 0; }
+
+.align-left {
+  text-align: left; }
+
+.align-right {
+  text-align: right; }
+
+.align-center {
+  text-align: center; }
+
+.align-justify {
+  text-align: justify; }
+
+.msg {
+  border-left: 2px solid transparent;
+  padding: 1.06667rem 1.06667rem; }
+  .msg--highlight {
+    background-color: #fff8e6;
+    border-color: #e2ac4f; }
+  .msg--info {
+    background: rgba(45, 97, 201, 0.03);
+    border-color: #039be5; }
+  .msg--success {
+    background: #f7fbf6;
+    border-color: #5ab44b; }
+  .msg--warning {
+    background: #fff3f3;
+    border-color: #c06367;
+    color: #a94442; }
+
+.dropcap:first-letter {
+  float: left;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 2.16943rem;
+  line-height: 0.7;
+  margin-right: 0.53333rem;
+  padding: 0.53333rem 0.53333rem 0.53333rem 0; }
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0.8rem 0; }
+  .pagination > a {
+    padding-left: 0;
+    padding-right: 0;
+    width: 49%; }
+  .pagination-right {
+    margin-left: auto; }
+
+.bottom {
+  background: #039be5;
+  color: #ffffff;
+  padding: 1.06667rem 4%;
+  text-align: center; }
+
+    /*
+ * Put your custom CSS code here (it will be used only in AMP mode)
+ */</style><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><script async src="https://cdn.ampproject.org/v0.js"></script><script custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js" async></script><script custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js" async></script></head><body class="bg-white"><nav class="navbar wrap-inner" id="top"><div><a on="tap:navbar-sidebar.toggle" class="navbar-sidebar-toggle" title="Menu">Menu</a> <a class="logo" href="https://docs.inspireui.com/amp/">InspireUI Blog</a></div></nav><main class="wrap-page"><article class="post"><figure class="post-featured-image"><amp-img src="https://docs.inspireui.com/media/posts/7/1_Sk-iUeIOWpGmO53yq0A5Sw-1.jpeg" alt="" srcset="https://docs.inspireui.com/media/posts/7/responsive/1_Sk-iUeIOWpGmO53yq0A5Sw-1-xs.jpeg 384w ,https://docs.inspireui.com/media/posts/7/responsive/1_Sk-iUeIOWpGmO53yq0A5Sw-1-sm.jpeg 600w ,https://docs.inspireui.com/media/posts/7/responsive/1_Sk-iUeIOWpGmO53yq0A5Sw-1-md.jpeg 768w" sizes="(max-width: 768px) 100vw, 768px" height="711" layout="responsive" width="1400"></amp-img></figure><div class="wrap-inner"><header class="post-header"><h1>How to build the Flutter Instant App</h1><p class="post-meta">By <a href="https://docs.inspireui.com/amp/authors/inspireui/" rel="nofollow" title="InspireUI">InspireUI</a> <time datetime="2000-11-02T14:57">November 2, 2000</time></p></header><div class="ir is it iu iv"><blockquote class="jv jw jx"><p id="9e43" class="jy jz ka kb b kc kd ke kf kg kh ki kj kk kl km kn ko kp kq kr ks kt ku kv kw ir ga" data-selectable-paragraph=""><mark class="xg xh qo">Imagine how great it would be if you could try out apps without even installing them. Yes, you can make it with the awesome </mark><mark class="xg xh qo"><strong class="kb iz">Flutter</strong></mark><mark class="xg xh qo"> framework!</mark></p></blockquote><p id="f4de" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj kx kl km kn ky kp kq kr kz kt ku kv kw ir ga" data-selectable-paragraph="">How does your customer run your app on Google Play without installing it? In this topic, we will guide to release <a class="au la" href="https://1.envato.market/mKdNe" rel="noopener ugc nofollow" target="_blank">the Flutter Instant App</a> to Google Play Store and optimize the Flutter project to meet all <a class="au la" href="https://developer.android.com/topic/google-play-instant" rel="noopener ugc nofollow" target="_blank">Google Play Instant app</a> requirements.</p><figure class="lc ld le lf gx lg gl gm paragraph-image"><div class="lh li do lj ce lk" tabindex="0" role="button"><div class="gl gm lb"><figure class="ce ll lm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*Sk-iUeIOWpGmO53yq0A5Sw.jpeg 640w, https://miro.medium.com/max/720/1*Sk-iUeIOWpGmO53yq0A5Sw.jpeg 720w, https://miro.medium.com/max/750/1*Sk-iUeIOWpGmO53yq0A5Sw.jpeg 750w, https://miro.medium.com/max/786/1*Sk-iUeIOWpGmO53yq0A5Sw.jpeg 786w, https://miro.medium.com/max/828/1*Sk-iUeIOWpGmO53yq0A5Sw.jpeg 828w, https://miro.medium.com/max/1100/1*Sk-iUeIOWpGmO53yq0A5Sw.jpeg 1100w, https://miro.medium.com/max/1400/1*Sk-iUeIOWpGmO53yq0A5Sw.jpeg 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*Sk-iUeIOWpGmO53yq0A5Sw.jpeg" alt="" width="700" height="356" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div><figcaption class="ln bl gn gl gm lo lp bm b bn bo cn" data-selectable-paragraph="">Flutter Instant App with FluxStore</figcaption></figure><p id="f12c" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj kx kl km kn ky kp kq kr kz kt ku kv kw ir ga" data-selectable-paragraph="">In this tutorial you’ll learn:</p><ul><li id="ba89" class="lq lr iy kb b kc kd kg kh kx ls ky lt kz lu kw lv lw lx ly ga" data-selectable-paragraph="">How to convert <a class="au la" href="https://1.envato.market/mKdNe" rel="noopener ugc nofollow" target="_blank"><strong class="kb iz">Flutter App</strong> to support Instant App Feature from Google</a>.</li><li id="b548" class="lq lr iy kb b kc lz kg ma kx mb ky mc kz md kw lv lw lx ly ga" data-selectable-paragraph="">How to <strong class="kb iz">Analyze the APK </strong>and check the root cause to reduce size.</li><li id="7ceb" class="lq lr iy kb b kc lz kg ma kx mb ky mc kz md kw lv lw lx ly ga" data-selectable-paragraph="">Know how to use the <strong class="kb iz">Instant Development SDK</strong> to instantly enable your apps.</li><li id="f77d" class="lq lr iy kb b kc lz kg ma kx mb ky mc kz md kw lv lw lx ly ga" data-selectable-paragraph="">What the <strong class="kb iz">App Links</strong> are and how to use them in combination with instant apps.</li></ul><p id="6993" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj kx kl km kn ky kp kq kr kz kt ku kv kw ir ga" data-selectable-paragraph="">Requirements to follow this guide:</p><ul><li id="3068" class="lq lr iy kb b kc kd kg kh kx ls ky lt kz lu kw lv lw lx ly ga" data-selectable-paragraph="">Good knowledge of Flutter framework, you may know to set up the basic <a class="au la" href="https://flutter.dev/docs/get-started/test-drive" rel="noopener ugc nofollow" target="_blank">Flutter example</a>, passed some <a class="au la" href="https://flutter.dev/docs/codelabs" rel="noopener ugc nofollow" target="_blank">CodeLab</a> guidelines from Google, and know-how to build the <a class="au la" href="https://flutter.dev/docs/deployment/android" rel="noopener ugc nofollow" target="_blank">Flutter APK</a></li><li id="f59e" class="lq lr iy kb b kc lz kg ma kx mb ky mc kz md kw lv lw lx ly ga" data-selectable-paragraph="">You can try with your own Fluter App but the total final APK file should have a maximum of 10MB, on this topic we are using the <a class="au la" href="https://codecanyon.net/item/fluxstore-the-universal-woocommerce-magento-opencart-mobile-app-by-flutter-framework/reviews/24020929" rel="noopener ugc nofollow" target="_blank">FluxStore Pro</a> app which is used to demo throughout the guide.</li><li id="fe70" class="lq lr iy kb b kc lz kg ma kx mb ky mc kz md kw lv lw lx ly ga" data-selectable-paragraph="">Install the latest <a class="au la" href="https://developer.android.com/studio" rel="noopener ugc nofollow" target="_blank">Android Studio 3.6</a> with the Flutter plugins.</li></ul></div><div class="o dx me mf id mg" role="separator"> </div><div class="ir is it iu iv"><h1 id="3315" class="ml mm iy bm mn mo mp mq mr ms mt mu mv mw mx my mz na nb nc nd ne nf ng nh ni ga" data-selectable-paragraph="">1. Analyze APK Size</h1><ul><li id="c2e1" class="lq lr iy kb b kc nj kg nk kx nl ky nm kz nn kw lv lw lx ly ga" data-selectable-paragraph="">Running the script below script to generate the API files:</li></ul><pre class="lc ld le lf gx no bs np nq dz nr"><span id="81eb" class="ga ns mm iy nr b dm nt nu l nv nw" data-selectable-paragraph="">flutter build apk --split-per-abi</span></pre><ul><li id="6132" class="lq lr iy kb b kc kd kg kh kx ls ky lt kz lu kw lv lw lx ly ga" data-selectable-paragraph="">Open the Android <mark class="xg xh qo">Studio </mark>app and select Analyze feature from the menu <code class="fp nx ny nz nr b">Build &gt; Analyze APK...</code> then select the final output folder <code class="fp nx ny nz nr b">build &gt; app &gt; outputs &gt; apk</code></li><li id="610d" class="lq lr iy kb b kc lz kg ma kx mb ky mc kz md kw lv lw lx ly ga" data-selectable-paragraph="">Analyzer is a great tool that is attached to Android Studio to check the APK size. It is enabled default on latest Android Studio 3.6.</li><li id="1d08" class="lq lr iy kb b kc lz kg ma kx mb ky mc kz md kw lv lw lx ly ga" data-selectable-paragraph="">The Analyzer is the great tool come with <mark class="xg xh qo">Android</mark> Studio to check the APK size, it enables default on latest Android Studio 3.6</li></ul><figure class="lc ld le lf gx lg gl gm paragraph-image"><div class="lh li do lj ce lk" tabindex="0" role="button"><div class="gl gm oa"><figure class="ce ll lm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*KjwKAxjQGCxBOCLOwz_NYw.png 640w, https://miro.medium.com/max/720/1*KjwKAxjQGCxBOCLOwz_NYw.png 720w, https://miro.medium.com/max/750/1*KjwKAxjQGCxBOCLOwz_NYw.png 750w, https://miro.medium.com/max/786/1*KjwKAxjQGCxBOCLOwz_NYw.png 786w, https://miro.medium.com/max/828/1*KjwKAxjQGCxBOCLOwz_NYw.png 828w, https://miro.medium.com/max/1100/1*KjwKAxjQGCxBOCLOwz_NYw.png 1100w, https://miro.medium.com/max/1400/1*KjwKAxjQGCxBOCLOwz_NYw.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*KjwKAxjQGCxBOCLOwz_NYw.png" alt="" width="700" height="459" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div><figcaption class="ln bl gn gl gm lo lp bm b bn bo cn" data-selectable-paragraph="">Screenshot from Analyze APK of Android Studio</figcaption></figure><ul><li id="662c" class="lq lr iy kb b kc kd kg kh kx ls ky lt kz lu kw lv lw lx ly ga" data-selectable-paragraph="">As you may know, the default Flutter application bundle contains native libraries <code class="fp nx ny nz nr b">lipapp.so</code> and <code class="fp nx ny nz nr b">libflutter.so</code>, each around 9MB, if we build with the <code class="fp nx ny nz nr b">Master</code> Flutter channel the size could be smaller ~0.5 MB. Other heavy resources are from the <code class="fp nx ny nz nr b">Assets</code> folder and <code class="fp nx ny nz nr b">classes.dex</code></li></ul></div><div class="o dx me mf id mg" role="separator"> </div><div class="ir is it iu iv"><h1 id="2af2" class="ml mm iy bm mn mo mp mq mr ms mt mu mv mw mx my mz na nb nc nd ne nf ng nh ni ga" data-selectable-paragraph="">2. Reduce the APK size</h1><ul><li id="b579" class="lq lr iy kb b kc nj kg nk kx nl ky nm kz nn kw lv lw lx ly ga" data-selectable-paragraph="">Our target is to reduce the app size to under 1MB. In order to do that, there is no choice but to remove some features such as Firebase, Admob, Facebook Ads… this is the <a class="au la" href="https://gist.github.com/minhcasi/f9e5c30c2cf373e7389efc6eb675df53" rel="noopener ugc nofollow" target="_blank">before and after</a> update <code class="fp nx ny nz nr b">pubspect.yaml</code> library.</li><li id="b7ad" class="lq lr iy kb b kc lz kg ma kx mb ky mc kz md kw lv lw lx ly ga" data-selectable-paragraph="">While reducing the size, please make sure to remove some heavy size asset files as well as compress the image, we use <a class="au la" href="http://www.derlien.com/" rel="noopener ugc nofollow" target="_blank">Disk Inventory X</a> to explore the detail files from the app, and <a class="au la" href="https://imageoptim.com/mac" rel="noopener ugc nofollow" target="_blank">ImageOptim</a> to compress the image.</li></ul><figure class="lc ld le lf gx lg gl gm paragraph-image"><div class="lh li do lj ce lk" tabindex="0" role="button"><div class="gl gm oa"><figure class="ce ll lm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*PA36OzSqtAm6zAMit0_FPQ.png 640w, https://miro.medium.com/max/720/1*PA36OzSqtAm6zAMit0_FPQ.png 720w, https://miro.medium.com/max/750/1*PA36OzSqtAm6zAMit0_FPQ.png 750w, https://miro.medium.com/max/786/1*PA36OzSqtAm6zAMit0_FPQ.png 786w, https://miro.medium.com/max/828/1*PA36OzSqtAm6zAMit0_FPQ.png 828w, https://miro.medium.com/max/1100/1*PA36OzSqtAm6zAMit0_FPQ.png 1100w, https://miro.medium.com/max/1400/1*PA36OzSqtAm6zAMit0_FPQ.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*PA36OzSqtAm6zAMit0_FPQ.png" alt="" width="700" height="459" loading="eager" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure></div><div class="o dx me mf id mg" role="separator"> </div><div class="ir is it iu iv"><h1 id="1b33" class="ml mm iy bm mn mo mp mq mr ms mt mu mv mw mx my mz na nb nc nd ne nf ng nh ni ga" data-selectable-paragraph="">3. Google App Instant Setting Keynote</h1><p id="c049" class="pw-post-body-paragraph jy jz iy kb b kc nj ke kf kg nk ki kj kx ob km kn ky oc kq kr kz od ku kv kw ir ga" data-selectable-paragraph="">To convert your Flutter app to the Instant App, make sure to follow the <a class="au la" href="https://developer.android.com/topic/google-play-instant" rel="noopener ugc nofollow" target="_blank">official guide </a>from Google, here is some require keynote:</p><ol><li id="09e2" class="lq lr iy kb b kc kd kg kh kx ls ky lt kz lu kw oe lw lx ly ga" data-selectable-paragraph="">Install <strong class="kb iz">Google Play Instant Development SDK, </strong>after installing please check the script <code class="fp nx ny nz nr b">ia help</code> to make sure the tool is installed correctly.</li></ol><figure class="lc ld le lf gx lg gl gm paragraph-image"><div class="lh li do lj ce lk" tabindex="0" role="button"><div class="gl gm of"><figure class="ce ll lm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*bOeeqSqlTg3RODJiyeljVA.png 640w, https://miro.medium.com/max/720/1*bOeeqSqlTg3RODJiyeljVA.png 720w, https://miro.medium.com/max/750/1*bOeeqSqlTg3RODJiyeljVA.png 750w, https://miro.medium.com/max/786/1*bOeeqSqlTg3RODJiyeljVA.png 786w, https://miro.medium.com/max/828/1*bOeeqSqlTg3RODJiyeljVA.png 828w, https://miro.medium.com/max/1100/1*bOeeqSqlTg3RODJiyeljVA.png 1100w, https://miro.medium.com/max/1400/1*bOeeqSqlTg3RODJiyeljVA.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*bOeeqSqlTg3RODJiyeljVA.png" alt="" width="700" height="452" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div><figcaption class="ln bl gn gl gm lo lp bm b bn bo cn" data-selectable-paragraph="">Android SDK setting</figcaption></figure><figure class="lc ld le lf gx lg gl gm paragraph-image"><div class="lh li do lj ce lk" tabindex="0" role="button"><div class="gl gm og"><figure class="ce ll lm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*1FHClzxoBnKCjAk9UJj4fg.png 640w, https://miro.medium.com/max/720/1*1FHClzxoBnKCjAk9UJj4fg.png 720w, https://miro.medium.com/max/750/1*1FHClzxoBnKCjAk9UJj4fg.png 750w, https://miro.medium.com/max/786/1*1FHClzxoBnKCjAk9UJj4fg.png 786w, https://miro.medium.com/max/828/1*1FHClzxoBnKCjAk9UJj4fg.png 828w, https://miro.medium.com/max/1100/1*1FHClzxoBnKCjAk9UJj4fg.png 1100w, https://miro.medium.com/max/1400/1*1FHClzxoBnKCjAk9UJj4fg.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*1FHClzxoBnKCjAk9UJj4fg.png" alt="" width="700" height="163" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div><figcaption class="ln bl gn gl gm lo lp bm b bn bo cn" data-selectable-paragraph="">`<strong class="bm oh">ia help</strong>` script</figcaption></figure><p id="2672" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj kx kl km kn ky kp kq kr kz kt ku kv kw ir ga" data-selectable-paragraph="">2. After installing <strong class="kb iz">Instant Development SDK </strong>successful, open Android Studio and open the project <strong class="kb iz">android</strong> folder (it’s not the root Flutter project), right-click to the <code class="fp nx ny nz nr b">app</code> folder and select <code class="fp nx ny nz nr b">Refactor &gt; Enable Instant Apps Support...</code></p><figure class="lc ld le lf gx lg gl gm paragraph-image"><div class="lh li do lj ce lk" tabindex="0" role="button"><div class="gl gm oi"><figure class="ce ll lm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*V0E28TqX1ZTUTbxX7SqrYg.png 640w, https://miro.medium.com/max/720/1*V0E28TqX1ZTUTbxX7SqrYg.png 720w, https://miro.medium.com/max/750/1*V0E28TqX1ZTUTbxX7SqrYg.png 750w, https://miro.medium.com/max/786/1*V0E28TqX1ZTUTbxX7SqrYg.png 786w, https://miro.medium.com/max/828/1*V0E28TqX1ZTUTbxX7SqrYg.png 828w, https://miro.medium.com/max/1100/1*V0E28TqX1ZTUTbxX7SqrYg.png 1100w, https://miro.medium.com/max/1400/1*V0E28TqX1ZTUTbxX7SqrYg.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*V0E28TqX1ZTUTbxX7SqrYg.png" alt="" width="700" height="441" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><p id="f295" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj kx kl km kn ky kp kq kr kz kt ku kv kw ir ga" data-selectable-paragraph="">Then you may see some changes from the <strong class="kb iz">AndroidManifest.xml</strong> file as below, you can edit the file manually if you do not use this menu.</p><pre class="lc ld le lf gx no bs np nq dz nr"><span id="9260" class="ga ns mm iy nr b dm nt nu l nv nw" data-selectable-paragraph="">&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"<br>    xmlns:dist="http://schemas.android.com/apk/distribution"<br>    android:targetSandboxVersion="2"<br>    package="com.inspireui.fluxstore"&gt;<br><br>    &lt;!-- The following declaration enables this module to be served instantly --&gt;<br>    &lt;dist:module dist:instant="true"&gt;&lt;/dist:module&gt;<br>...<br>    &lt;/application&gt;<br>&lt;/manifest&gt;</span></pre><p id="c529" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj kx kl km kn ky kp kq kr kz kt ku kv kw ir ga" data-selectable-paragraph="">3. Open <code class="fp nx ny nz nr b">Tools &gt; App Links Assistants</code> and use this tool to verify the app link, to understand more about App Link please check <a class="au la" href="https://developer.android.com/studio/write/app-link-indexing" rel="noopener ugc nofollow" target="_blank">this guide</a>. The final XML file could refer to <a class="au la" href="https://gist.github.com/minhcasi/f9e5c30c2cf373e7389efc6eb675df53" rel="noopener ugc nofollow" target="_blank">this Gist</a></p><figure class="lc ld le lf gx lg gl gm paragraph-image"><div class="lh li do lj ce lk" tabindex="0" role="button"><div class="gl gm oj"><figure class="ce ll lm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*bQUYics_w-xhuVsWJbu1Hw.png 640w, https://miro.medium.com/max/720/1*bQUYics_w-xhuVsWJbu1Hw.png 720w, https://miro.medium.com/max/750/1*bQUYics_w-xhuVsWJbu1Hw.png 750w, https://miro.medium.com/max/786/1*bQUYics_w-xhuVsWJbu1Hw.png 786w, https://miro.medium.com/max/828/1*bQUYics_w-xhuVsWJbu1Hw.png 828w, https://miro.medium.com/max/1100/1*bQUYics_w-xhuVsWJbu1Hw.png 1100w, https://miro.medium.com/max/1400/1*bQUYics_w-xhuVsWJbu1Hw.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*bQUYics_w-xhuVsWJbu1Hw.png" alt="" width="700" height="459" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div><figcaption class="ln bl gn gl gm lo lp bm b bn bo cn" data-selectable-paragraph="">Step 1: add new App Link</figcaption></figure><figure class="lc ld le lf gx lg gl gm paragraph-image"><div class="lh li do lj ce lk" tabindex="0" role="button"><div class="gl gm oj"><figure class="ce ll lm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*FVwQoArjwYDbOiHS-WE_gQ.png 640w, https://miro.medium.com/max/720/1*FVwQoArjwYDbOiHS-WE_gQ.png 720w, https://miro.medium.com/max/750/1*FVwQoArjwYDbOiHS-WE_gQ.png 750w, https://miro.medium.com/max/786/1*FVwQoArjwYDbOiHS-WE_gQ.png 786w, https://miro.medium.com/max/828/1*FVwQoArjwYDbOiHS-WE_gQ.png 828w, https://miro.medium.com/max/1100/1*FVwQoArjwYDbOiHS-WE_gQ.png 1100w, https://miro.medium.com/max/1400/1*FVwQoArjwYDbOiHS-WE_gQ.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*FVwQoArjwYDbOiHS-WE_gQ.png" alt="" width="700" height="459" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div><figcaption class="ln bl gn gl gm lo lp bm b bn bo cn" data-selectable-paragraph="">Step 2: Generate the assetlinks.json file and copy to your hosting</figcaption></figure><figure class="lc ld le lf gx lg gl gm paragraph-image"><div class="lh li do lj ce lk" tabindex="0" role="button"><div class="gl gm oj"><figure class="ce ll lm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*EXWH3b_S1Y93PmQcBliwsw.png 640w, https://miro.medium.com/max/720/1*EXWH3b_S1Y93PmQcBliwsw.png 720w, https://miro.medium.com/max/750/1*EXWH3b_S1Y93PmQcBliwsw.png 750w, https://miro.medium.com/max/786/1*EXWH3b_S1Y93PmQcBliwsw.png 786w, https://miro.medium.com/max/828/1*EXWH3b_S1Y93PmQcBliwsw.png 828w, https://miro.medium.com/max/1100/1*EXWH3b_S1Y93PmQcBliwsw.png 1100w, https://miro.medium.com/max/1400/1*EXWH3b_S1Y93PmQcBliwsw.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*EXWH3b_S1Y93PmQcBliwsw.png" alt="" width="700" height="459" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div><figcaption class="ln bl gn gl gm lo lp bm b bn bo cn" data-selectable-paragraph="">Step 3: Verify if the app link is working</figcaption></figure><p id="aa6d" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj kx kl km kn ky kp kq kr kz kt ku kv kw ir ga" data-selectable-paragraph="">4.<mark class="xg xh qo"> Restart the version codes for the Google Play Instant experience at 1. Also I=increase the version code of the installable APK by a </mark><mark class="xg xh qo"><strong class="kb iz">large number</strong></mark><mark class="xg xh qo"> (such as 4000, to ensure that there is enough space for your instant experience’s version number to increase).</mark></p><p id="328f" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj kx kl km kn ky kp kq kr kz kt ku kv kw ir ga" data-selectable-paragraph="">5. Test the app on the simulator by running this script, make sure to install <strong class="kb iz">Instant Development SDK</strong> as the above guide.</p><pre class="lc ld le lf gx no bs np nq dz nr"><span id="c163" class="ga ns mm iy nr b dm nt nu l nv nw" data-selectable-paragraph=""><em class="ka">// </em><em class="ka">Checks an instant app for errors, make sure the total app size belove 10MB, otherwise, you need to reduce the project.</em><br><strong class="nr iz">ia check apk-file-path</strong></span><span id="5296" class="ga ns mm iy nr b dm ok nu l nv nw" data-selectable-paragraph=""><em class="ka">// Launches an instant app to simulator or your connect device</em><br><strong class="nr iz">ia run apk-file-path</strong></span></pre><figure class="lc ld le lf gx lg gl gm paragraph-image"><div class="lh li do lj ce lk" tabindex="0" role="button"><div class="gl gm ol"><figure class="ce ll lm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*lRuearKc6nmWwMlIILZMAg.png 640w, https://miro.medium.com/max/720/1*lRuearKc6nmWwMlIILZMAg.png 720w, https://miro.medium.com/max/750/1*lRuearKc6nmWwMlIILZMAg.png 750w, https://miro.medium.com/max/786/1*lRuearKc6nmWwMlIILZMAg.png 786w, https://miro.medium.com/max/828/1*lRuearKc6nmWwMlIILZMAg.png 828w, https://miro.medium.com/max/1100/1*lRuearKc6nmWwMlIILZMAg.png 1100w, https://miro.medium.com/max/1400/1*lRuearKc6nmWwMlIILZMAg.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*lRuearKc6nmWwMlIILZMAg.png" alt="" width="700" height="232" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div><figcaption class="ln bl gn gl gm lo lp bm b bn bo cn" data-selectable-paragraph="">Check the Instant Development Folder</figcaption></figure><figure class="lc ld le lf gx lg gl gm paragraph-image"><div class="lh li do lj ce lk" tabindex="0" role="button"><div class="gl gm om"><figure class="ce ll lm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*aBwNGyhPNBZpr3L0Mw_aiw.png 640w, https://miro.medium.com/max/720/1*aBwNGyhPNBZpr3L0Mw_aiw.png 720w, https://miro.medium.com/max/750/1*aBwNGyhPNBZpr3L0Mw_aiw.png 750w, https://miro.medium.com/max/786/1*aBwNGyhPNBZpr3L0Mw_aiw.png 786w, https://miro.medium.com/max/828/1*aBwNGyhPNBZpr3L0Mw_aiw.png 828w, https://miro.medium.com/max/1100/1*aBwNGyhPNBZpr3L0Mw_aiw.png 1100w, https://miro.medium.com/max/1400/1*aBwNGyhPNBZpr3L0Mw_aiw.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*aBwNGyhPNBZpr3L0Mw_aiw.png" alt="" width="700" height="442" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><p id="0044" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj kx kl km kn ky kp kq kr kz kt ku kv kw ir ga" data-selectable-paragraph="">6. If you have set up the app successfully, it is ready for upload to Appstore. First, make sure to zip the APK before uploading it. Then, go to <strong class="kb iz">Release Management &gt; Android Instant Apps </strong>to create the New Release and upload new APK.</p><figure class="lc ld le lf gx lg gl gm paragraph-image"><div class="lh li do lj ce lk" tabindex="0" role="button"><div class="gl gm on"><figure class="ce ll lm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*f1YU5JeX7hohROy-kx3k0w.png 640w, https://miro.medium.com/max/720/1*f1YU5JeX7hohROy-kx3k0w.png 720w, https://miro.medium.com/max/750/1*f1YU5JeX7hohROy-kx3k0w.png 750w, https://miro.medium.com/max/786/1*f1YU5JeX7hohROy-kx3k0w.png 786w, https://miro.medium.com/max/828/1*f1YU5JeX7hohROy-kx3k0w.png 828w, https://miro.medium.com/max/1100/1*f1YU5JeX7hohROy-kx3k0w.png 1100w, https://miro.medium.com/max/1400/1*f1YU5JeX7hohROy-kx3k0w.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*f1YU5JeX7hohROy-kx3k0w.png" alt="" width="700" height="405" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure></div><div class="o dx me mf id mg" role="separator"> </div><div class="ir is it iu iv"><h1 id="8c0c" class="ml mm iy bm mn mo mp mq mr ms mt mu mv mw mx my mz na nb nc nd ne nf ng nh ni ga" data-selectable-paragraph="">4. How To Test Instant App</h1><p id="c2f6" class="pw-post-body-paragraph jy jz iy kb b kc nj ke kf kg nk ki kj kx ob km kn ky oc kq kr kz od ku kv kw ir ga" data-selectable-paragraph="">Search the app on Google Play you can see the “Try Now” button app, it’s possible to click the app without installing it, see the instant app demo:</p><div class="oo op gt gv oq or"><a href="https://youtube.com/shorts/cfjFqHKwQQM?feature=share" rel="noopener noreferrer" target="_blank"><div class="os o fr"><div class="ot o da dx en ou"> </div><div class="oz l"><div class="pa l pb pc pd oz pe ll or"><figure class="post__image"><amp-img src="https://docs.inspireui.com/media/posts/7/Screenshot-2022-11-02-at-14.56.44.png" alt="" width="958" height="1356" sizes="(max-width: 48em) 100vw, 100vw" srcset="https://docs.inspireui.com/media/posts/7/responsive/Screenshot-2022-11-02-at-14.56.44-xs.png 384w ,https://docs.inspireui.com/media/posts/7/responsive/Screenshot-2022-11-02-at-14.56.44-sm.png 600w ,https://docs.inspireui.com/media/posts/7/responsive/Screenshot-2022-11-02-at-14.56.44-md.png 768w ,https://docs.inspireui.com/media/posts/7/responsive/Screenshot-2022-11-02-at-14.56.44-lg.png 1200w" layout="responsive"></amp-img></figure></div></div></div></a></div><p id="a261" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj kx kl km kn ky kp kq kr kz kt ku kv kw ir ga" data-selectable-paragraph="">Hope you enjoyed this article and that it might have been of help for people who had similar needs. Greetings!</p><p id="cbcd" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj kx kl km kn ky kp kq kr kz kt ku kv kw ir ga" data-selectable-paragraph=""></p></div><aside><ul class="post-tag"><li><a href="https://docs.inspireui.com/amp/tags/fluxbuilder/">FluxBuilder</a></li></ul><div class="post-share"><amp-social-share type="system" width="40" height="40" data-param-text="How to build the Flutter Instant App"></amp-social-share><amp-social-share type="facebook" width="40" height="40" data-param-app_id="" data-param-text="How to build the Flutter Instant App" data-param-href="https://docs.inspireui.com/amp/how-to-build-the-flutter-instant-app/"></amp-social-share><amp-social-share type="twitter" width="40" height="40" data-param-text="How to build the Flutter Instant App" data-param-url="https://docs.inspireui.com/amp/how-to-build-the-flutter-instant-app/"></amp-social-share><amp-social-share type="pinterest" width="40" height="40" data-param-url="https://docs.inspireui.com/amp/how-to-build-the-flutter-instant-app/"></amp-social-share><amp-social-share type="tumblr" width="40" height="40" data-param-text="How to build the Flutter Instant App" data-param-url="https://docs.inspireui.com/amp/how-to-build-the-flutter-instant-app/"></amp-social-share><amp-social-share type="whatsapp" width="40" height="40" data-param-text="How to build the Flutter Instant App" data-param-url="https://docs.inspireui.com/amp/how-to-build-the-flutter-instant-app/"></amp-social-share></div></aside></div></article></main><amp-animation id="showAnim" layout="nodisplay"><script type="application/json">{
+                    "duration": "200ms",
+                    "fill": "both",
+                    "iterations": "1",
+                    "direction": "alternate",
+                    "animations": [{
+                        "selector": ".post-scroll",
+                        "keyframes": [{
+                            "opacity": "1",
+                            "visibility": "visible",
+                            "transform": "scale(1)"
+                        }]
+                    }]
+                }</script></amp-animation><amp-animation id="hideAnim" layout="nodisplay"><script type="application/json">{
+                    "duration": "200ms",
+                    "fill": "both",
+                    "iterations": "1",
+                    "direction": "alternate",
+                    "animations": [{
+                        "selector": ".post-scroll",
+                        "keyframes": [{
+                            "opacity": "0",
+                            "visibility": "hidden",
+                            "transform": "scale(0.1)"
+                        }]
+                    }]
+                }</script></amp-animation><div class="post-scroll-marker"><amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay"></amp-position-observer></div><button class="post-scroll" on="tap:top.scrollTo(duration=200)">&#8593;</button><footer class="bottom">Powered by Publii</footer><amp-sidebar id="navbar-sidebar" layout="nodisplay"><ul><li><a href="https://inspireui.com" title="InspireUI Home">Home</a></li><li><a href="https://docs.inspireui.com/amp/" title="Blog">Blog</a></li><li><a href="https://inspireui.com/products" title="Products">Products</a></li><li><a href="https://inspireui.com/about/" title="About Us">About Us</a></li><li><a href="https://support.inspireui.com" title="Support">Support</a></li></ul></amp-sidebar></body></html>
