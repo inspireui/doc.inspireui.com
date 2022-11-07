@@ -21,9 +21,10 @@
                 "name": "InspireUI"
             },
             "tags": [
+                   "FluxStore"
             ],
             "date_published": "2022-11-02T21:10:06+07:00",
-            "date_modified": "2022-11-07T17:20:04+07:00"
+            "date_modified": "2022-11-07T17:23:38+07:00"
         },
         {
             "id": "https://blog.inspireui.com/announcing-fluxbuilder-15x/",

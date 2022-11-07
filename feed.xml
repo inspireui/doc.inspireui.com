@@ -3,7 +3,7 @@
     <title>InspireUI Blog</title>
     <link href="https://blog.inspireui.com/feed.xml" rel="self" />
     <link href="https://blog.inspireui.com" />
-    <updated>2022-11-07T17:20:04+07:00</updated>
+    <updated>2022-11-07T17:23:38+07:00</updated>
     <author>
         <name>InspireUI</name>
     </author>
@@ -17,8 +17,9 @@
         <link href="https://blog.inspireui.com/annoucing-fluxstore-33/"/>
         <id>https://blog.inspireui.com/annoucing-fluxstore-33/</id>
         <media:content url="https://blog.inspireui.com/media/posts/27/fluxstore-3.3.png" medium="image" />
+            <category term="FluxStore"/>
 
-        <updated>2022-11-07T17:20:04+07:00</updated>
+        <updated>2022-11-07T17:23:38+07:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://blog.inspireui.com/media/posts/27/fluxstore-3.3.png" alt="" />
