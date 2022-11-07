@@ -3,7 +3,7 @@
     <title>InspireUI Blog</title>
     <link href="https://blog.inspireui.com/feed.xml" rel="self" />
     <link href="https://blog.inspireui.com" />
-    <updated>2022-11-07T17:23:38+07:00</updated>
+    <updated>2022-11-07T17:25:19+07:00</updated>
     <author>
         <name>InspireUI</name>
     </author>
@@ -19,7 +19,7 @@
         <media:content url="https://blog.inspireui.com/media/posts/27/fluxstore-3.3.png" medium="image" />
             <category term="FluxStore"/>
 
-        <updated>2022-11-07T17:23:38+07:00</updated>
+        <updated>2022-11-07T17:25:19+07:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://blog.inspireui.com/media/posts/27/fluxstore-3.3.png" alt="" />
@@ -46,13 +46,6 @@
 <h3><span class="notion-enable-hover" data-token-index="0" data-reactroot="">Important improvements</span></h3>
 <p>➡️ Compatible with <span class="notion-enable-hover" data-token-index="1" data-reactroot="">latest Flutter 3.3.x.</span><br>➡️ Limit Login Attempts Reloaded.<br>➡️ Cart icon for LTR and RTL<br>➡️ Support Android 13.<br>➡️ Ability to add Notes with Link on Order.<br>➡️ Upgrade all pubspec Libraries to latest.<br>➡️ Fix TikTok videos not load.<br>➡️ Fix video on TikTok that are stretched.<br>➡️ Fix general web item not update when login.<br>➡️ Fix multi language for brands.<br>➡️ Fix category product list.<br>➡️ Fix cannot update menu label.<br>➡️ Fix stuck at empty splash screen when isCaching config not loaded<br>➡️ Fix tap payment issue<br>➡️ Fix wrong shipping fee<br>➡️ Fix: max allow quantity when add product<br>➡️ Fix choose time of booking don't appear<br>➡️ Fix the app does not request permission push notification<br>➡️ Fix wrong currency in paystack payment<br>➡️ Fix total cart for subscription<br>➡️ Fix: click text story<br>➡️ Fix login for webview<br>➡️ Fix point redemption when create order<br>➡️ Fix defaultCurrency symbol in textField when editing product<br>➡️ Fix vertical layout column with filter UI<br>➡️ Fix missing author data of blog<br>➡️ Fix minor bugs in sms login<br>➡️ Fix AutoUpdate</p>
 <figure class="post__image"><a href="http://codecayon.net/downloads"><img decoding="async" loading="lazy"  src="https://blog.inspireui.com/media/posts/27/download.png" alt="" width="1404" height="526"></figure></a></p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
-<p> </p>
             ]]>
         </content>
     </entry>
