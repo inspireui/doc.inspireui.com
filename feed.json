@@ -21,7 +21,8 @@
                 "name": "InspireUI"
             },
             "tags": [
-                   "FluxStore"
+                   "FluxStore",
+                   "FluxBuilder"
             ],
             "date_published": "2022-11-09T18:10:00+07:00",
             "date_modified": "2022-11-09T18:10:00+07:00"
@@ -37,10 +38,11 @@
                 "name": "InspireUI"
             },
             "tags": [
+                   "FluxStore",
                    "FluxBuilder"
             ],
             "date_published": "2022-11-09T16:44:00+07:00",
-            "date_modified": "2022-11-09T16:55:29+07:00"
+            "date_modified": "2022-11-09T16:56:09+07:00"
         },
         {
             "id": "https://blog.inspireui.com/showcase-zey-zy-app/",

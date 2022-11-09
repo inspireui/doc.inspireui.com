@@ -18,6 +18,7 @@
         <id>https://blog.inspireui.com/annoucing-fluxstore-33/</id>
         <media:content url="https://blog.inspireui.com/media/posts/27/fluxstore-3.3.png" medium="image" />
             <category term="FluxStore"/>
+            <category term="FluxBuilder"/>
 
         <updated>2022-11-09T18:10:00+07:00</updated>
             <summary>
@@ -120,9 +121,10 @@
         <link href="https://blog.inspireui.com/annoucing-fluxbuilder-16/"/>
         <id>https://blog.inspireui.com/annoucing-fluxbuilder-16/</id>
         <media:content url="https://blog.inspireui.com/media/posts/37/fluxbuilder-1.6.x.png" medium="image" />
+            <category term="FluxStore"/>
             <category term="FluxBuilder"/>
 
-        <updated>2022-11-09T16:55:29+07:00</updated>
+        <updated>2022-11-09T16:56:09+07:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://blog.inspireui.com/media/posts/37/fluxbuilder-1.6.x.png" alt="" />
