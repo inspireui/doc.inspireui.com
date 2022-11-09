@@ -10,7 +10,7 @@
     <id>https://blog.inspireui.com</id>
 
     <entry>
-        <title>Annoucing FluxStore 3.3</title>
+        <title>Announcing FluxStore 3.3</title>
         <author>
             <name>InspireUI</name>
         </author>
@@ -33,15 +33,15 @@
                 <p>Hi friends, InspireUI here with a big bag of improvement in the latest FluxStore release.</p>
 <p>First of all, we would like to thank you for putting your trust in InspireUI and our FluxStore products ❤️. We’re here to help you get your business better optimized, and excited to do our part in maintaining and upgrading the products to be more <strong>powerful</strong>, <strong>flexible</strong>, and <strong>high-performance</strong>. </p>
 <figure class="post__image post__image--wide"><img decoding="async" loading="lazy"  src="https://blog.inspireui.com/media/posts/27/fact-1-3.png" alt="" width="2710" height="724" sizes="(max-width: 48em) 100vw, 100vw" srcset="https://blog.inspireui.com/media/posts/27/responsive/fact-1-3-xs.webp 600w ,https://blog.inspireui.com/media/posts/27/responsive/fact-1-3-sm.webp 1200w ,https://blog.inspireui.com/media/posts/27/responsive/fact-1-3-md.webp 1200w ,https://blog.inspireui.com/media/posts/27/responsive/fact-1-3-lg.webp 2000w"></figure>
-<h3><span class="notion-enable-hover" data-token-index="0" data-reactroot="">❇️  </span>What news in FluxStore v3.3 ?</h3>
-<p>The release includes <strong>148 merge</strong> requests including a lot of new features and important improvements. </p>
-<figure class="post__image"><img decoding="async" loading="lazy"  style="color: var(--text-primary-color); font-family: var(--editor-font-family); font-size: inherit; font-weight: var(--font-weight-normal);" src="https://blog.inspireui.com/media/posts/27/p1-2.png" alt="" width="1277" height="362" sizes="(max-width: 48em) 100vw, 100vw" srcset="https://blog.inspireui.com/media/posts/27/responsive/p1-2-xs.webp 600w ,https://blog.inspireui.com/media/posts/27/responsive/p1-2-sm.webp 1200w ,https://blog.inspireui.com/media/posts/27/responsive/p1-2-md.webp 1200w ,https://blog.inspireui.com/media/posts/27/responsive/p1-2-lg.webp 2000w"></figure>
 <div class="gallery-wrapper gallery-wrapper--full"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="4">
 <figure class="gallery__item"><a href="https://blog.inspireui.com/media/posts/27/gallery/nike-2.png" data-size="1000x850"><img decoding="async" loading="lazy" src="https://blog.inspireui.com/media/posts/27/gallery/nike-2-thumbnail.webp" alt="Tabmenu" width="768" height="653"></a></figure>
 <figure class="gallery__item"><a href="https://blog.inspireui.com/media/posts/27/gallery/scrollable-2.png" data-size="1000x850"><img decoding="async" loading="lazy" src="https://blog.inspireui.com/media/posts/27/gallery/scrollable-2-thumbnail.webp" alt="Scrollable" width="768" height="653"></a></figure>
 <figure class="gallery__item"><a href="https://blog.inspireui.com/media/posts/27/gallery/vertical-2.png" data-size="1000x850"><img decoding="async" loading="lazy" src="https://blog.inspireui.com/media/posts/27/gallery/vertical-2-thumbnail.webp" alt="Vertical Product Gallery" width="768" height="653"></a></figure>
 <figure class="gallery__item"><a href="https://blog.inspireui.com/media/posts/27/gallery/banner-2.png" data-size="1000x850"><img decoding="async" loading="lazy" src="https://blog.inspireui.com/media/posts/27/gallery/banner-2-thumbnail.webp" alt="Smart Engagement Banner" width="768" height="653"></a></figure>
 </div></div>
+<h3><span class="notion-enable-hover" data-token-index="0" data-reactroot="">❇️  </span>What news in FluxStore v3.3 ?</h3>
+<p>The release includes <strong>148 merge</strong> requests including a lot of new features and important improvements. </p>
+<figure class="post__image"><img decoding="async" loading="lazy"  style="color: var(--text-primary-color); font-family: var(--editor-font-family); font-size: inherit; font-weight: var(--font-weight-normal);" src="https://blog.inspireui.com/media/posts/27/p1-2.png" alt="" width="1277" height="362" sizes="(max-width: 48em) 100vw, 100vw" srcset="https://blog.inspireui.com/media/posts/27/responsive/p1-2-xs.webp 600w ,https://blog.inspireui.com/media/posts/27/responsive/p1-2-sm.webp 1200w ,https://blog.inspireui.com/media/posts/27/responsive/p1-2-md.webp 1200w ,https://blog.inspireui.com/media/posts/27/responsive/p1-2-lg.webp 2000w"></figure>
 <h3>New features</h3>
 <p><span class="notion-enable-hover" data-token-index="0" data-reactroot="">❇️ New <strong>2x</strong> performance improvement.<br></span><span class="notion-enable-hover" data-token-index="0" data-reactroot="">❇️ Easy &amp; simply upgrade - <a href="https://inspireui.notion.site/ChangeLog-57d70a412bcb4393acaa9d165b76df4f">see changelog</a></span><br>❇️ New <strong>TabMenu</strong> &amp; <strong>Scrollable </strong>layout - <a href="https://www.youtube.com/watch?v=r4MB2JuzNYY">see video</a><br>❇️ New Smart <span class="notion-enable-hover" data-token-index="0" data-reactroot=""><strong>Engagement</strong> </span>Banner - <a href="https://www.youtube.com/watch?v=oFFnE1Ssm74">see video</a><br><strong><span class="notion-enable-hover" data-token-index="0" data-reactroot="">❇️ Vertical </span>P</strong><span class="notion-enable-hover" data-token-index="2" data-reactroot=""><strong>roduct</strong> Gallery - <a href="https://www.youtube.com/watch?v=4yp7chCD2U4">see video</a><br></span><strong>❇️ </strong>Compatible with new<strong> FluxBuilder 1.6.x <span class="notion-enable-hover" data-token-index="2" data-reactroot=""> - </span></strong><span class="notion-enable-hover" data-token-index="2" data-reactroot=""><a href="https://inspireui.notion.site/ChangeLog-9931069f51c64e2993dcdc350f4bc332">see changelog</a></span><br>❇️ Show SMS Login screen by Default.<br>❇️ Upgrade <strong><span class="notion-enable-hover" data-token-index="1" data-reactroot="">Category</span></strong> layout<br><span class="notion-enable-hover" data-token-index="0" data-reactroot="">❇️ Upgrade <strong>Product Detail</strong> themes.<br></span>❇️ New Phone Number Config.<br><strong>❇️ Youtube</strong> video in<span class="notion-enable-hover" data-token-index="1" data-reactroot=""> Product Detail</span><br>❇️ New Languages: 🇦🇿 <span class="notion-enable-hover" data-token-index="0" data-reactroot="">Azerbaijan, Urdu</span></p>
 <h3><span class="notion-enable-hover" data-token-index="0" data-reactroot="">➡️  Important improvements</span></h3>
@@ -115,7 +115,7 @@
         </content>
     </entry>
     <entry>
-        <title>Annoucing FluxBuilder 1.6</title>
+        <title>Announcing FluxBuilder 1.6</title>
         <author>
             <name>InspireUI</name>
         </author>
@@ -125,7 +125,7 @@
             <category term="FluxStore"/>
             <category term="FluxBuilder"/>
 
-        <updated>2022-11-09T16:56:09+07:00</updated>
+        <updated>2022-11-09T17:32:50+07:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://blog.inspireui.com/media/posts/37/fluxbuilder-1.6.x.png" alt="" />
@@ -152,7 +152,7 @@
 <li>Window or MacOS: <a href="https://github.com/inspireui/fluxbuilder/releases">https://github.com/inspireui/fluxbuilder/releases</a> </li>
 <li>Web version: <a href="https://web.fluxbuilder.com">https://web.fluxbuilder.com</a> </li>
 </ul>
-<h5><figure class="post__image"><img decoding="async" loading="lazy"  style="color: var(--text-primary-color); font-family: var(--editor-font-family); font-size: inherit; font-weight: var(--font-weight-normal);" src="file:///Users/minh/Documents/Publii/sites/inspireui-blog/input/media/posts/27/fluxbuilder.png" alt="" width="693" height="164" sizes="(max-width: 48em) 100vw, 100vw" srcset="file:///Users/minh/Documents/Publii/sites/inspireui-blog/input/media/posts/27/responsive/fluxbuilder-xs.webp 600w ,file:///Users/minh/Documents/Publii/sites/inspireui-blog/input/media/posts/27/responsive/fluxbuilder-sm.webp 1200w ,file:///Users/minh/Documents/Publii/sites/inspireui-blog/input/media/posts/27/responsive/fluxbuilder-md.webp 1200w ,file:///Users/minh/Documents/Publii/sites/inspireui-blog/input/media/posts/27/responsive/fluxbuilder-lg.webp 2000w"></figure></h5>
+<figure class="post__image"><img decoding="async" loading="lazy"  src="https://blog.inspireui.com/media/posts/37/fluxbuilder.png" alt="" width="1404" height="333" sizes="(max-width: 48em) 100vw, 100vw" srcset="https://blog.inspireui.com/media/posts/37/responsive/fluxbuilder-xs.webp 600w ,https://blog.inspireui.com/media/posts/37/responsive/fluxbuilder-sm.webp 1200w ,https://blog.inspireui.com/media/posts/37/responsive/fluxbuilder-md.webp 1200w ,https://blog.inspireui.com/media/posts/37/responsive/fluxbuilder-lg.webp 2000w"></figure>
             ]]>
         </content>
     </entry>
