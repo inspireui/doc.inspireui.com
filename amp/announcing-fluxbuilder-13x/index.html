@@ -1,0 +1,600 @@
+<!doctype html><html amp lang="en-gb"><head><meta charset="utf-8"><title>Announcing FluxBuilder 1.3.x - InspireUI Blog</title><meta name="description" content="InspireUI - Elegant Flutter & React Native mobile app. All-in-one mobile solutions and services for Startups, Developers, Entrepreneurs and more"><link rel="canonical" href="https://blog.inspireui.com/announcing-fluxbuilder-13x/"><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" type="text/css"><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.inspireui.com/amp/announcing-fluxbuilder-13x/"},"headline":"Announcing FluxBuilder 1.3.x","datePublished":"2021-08-01T16:00","dateModified":"2022-11-02T16:02","image":{"@type":"ImageObject","url":"https://blog.inspireui.com/media/posts/24/1_LUCiQp5QDdquwpjt83JhyQ.png","height":924,"width":1400},"description":"InspireUI - Elegant Flutter & React Native mobile app. All-in-one mobile solutions and services for Startups, Developers, Entrepreneurs and more","author":{"@type":"Person","name":"InspireUI","url":"https://blog.inspireui.com/amp/authors/inspireui/"},"publisher":{"@type":"Organization","name":"InspireUI","logo":{"@type":"ImageObject","url":"https://blog.inspireui.com/media/website/logo.png","height":600,"width":600}}}</script><style amp-custom>article,
+aside,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+amp-img {
+  max-width: 100%; }
+
+button,
+input,
+select,
+textarea {
+  font: inherit; }
+
+html {
+  font-size: 1rem; }
+
+body {
+  background: #f1f1f1;
+  color: #262626;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.6; }
+
+a {
+  color:  #039be5;
+  text-decoration: none;
+  -webkit-transition: all 0.12s linear 0s;
+  -o-transition: all 0.12s linear 0s;
+  transition: all 0.12s linear 0s; }
+
+a:hover {
+  color: #262626;
+  text-decoration: underline;
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip: ink; }
+
+a:active {
+  color: #262626; }
+
+a:focus {
+  outline: 2px dotted #039be5; }
+
+figure,
+blockquote,
+p,
+ul,
+ol,
+dl,
+table,
+hr,
+fieldset {
+  margin-top: 1.6rem; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #262626;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 2.13333rem; }
+
+h1 {
+  font-size: 1.67583rem;
+  font-weight: normal; }
+
+h2 {
+  font-size: 1.4729rem; }
+
+h3 {
+  font-size: 1.29454rem; }
+
+h4 {
+  font-size: 1.13778rem; }
+
+h5 {
+  font-size: 1rem; }
+
+h6 {
+  font-size: 0.87891rem; }
+
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+  margin-top: 0.8rem; }
+
+b,
+strong {
+  font-weight: 600; }
+
+blockquote {
+  color: #6c7175;
+  font-family: "Droid Serif", "Times", "Source Serif Pro", serif;
+  font-style: italic;
+  padding: 1.33333rem 0.53333rem 1.33333rem 3.2rem;
+  position: relative; }
+  blockquote:before {
+    display: block;
+    content: "\201C";
+    font-size: 4.41226rem;
+    position: absolute;
+    left: 0;
+    top: -12px;
+    color: rgba(108, 113, 117, 0.5); }
+  blockquote > :nth-child(1) {
+    margin-top: 0; }
+
+ul,
+ol {
+  margin-left: 2rem; }
+  ul > li,
+  ol > li {
+    list-style: inherit;
+    padding: 0 0 0.26667rem 0.26667rem; }
+
+dl dt {
+  color: #262626;
+  font-weight: 600; }
+
+code,
+pre {
+  background-color: #f1f1f1;
+  font-family: monospace; }
+
+pre {
+  margin: 1.6rem 0 0;
+  padding: 1.6rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto; }
+  pre > code {
+    color: #262626;
+    padding: 0; }
+
+code {
+  border-radius: 3px;
+  color: #262626;
+  padding: 0.26667rem 0.53333rem; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #d4d4d4;
+  width: 100%;
+  overflow-x: auto;
+  vertical-align: top;
+  text-align: left;
+  white-space: nowrap; }
+  table th {
+    font-weight: 500;
+    padding: 0.53333rem 1.06667rem; }
+  table tr {
+    border-bottom: 1px solid #d4d4d4; }
+    table tr:nth-child(2n) {
+      background: #f1f1f1; }
+  table td {
+    padding: 0.53333rem 1.06667rem; }
+
+figcaption {
+  clear: both;
+  color: rgba(108, 113, 117, 0.6);
+  font-size: 0.82397rem;
+  margin: 0.8rem 0 0;
+  text-align: center; }
+
+sub,
+sup {
+  font-size: 65%; }
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+
+.btn, [type=button],
+[type=submit],
+button {
+  background: #039be5;
+  border: none;
+  border-radius: 2px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.87891rem;
+  font-weight: 500;
+  line-height: 1.9;
+  padding: 0.53333rem 1.33333rem;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all .15s ease;
+  -o-transition: all .15s ease;
+  transition: all .15s ease;
+  width: auto; }
+  .btn:hover, [type=button]:hover,
+  [type=submit]:hover,
+  button:hover {
+    background: #262626;
+    color: #ffffff; }
+  .btn:focus, [type=button]:focus,
+  [type=submit]:focus,
+  button:focus {
+    outline: none; }
+  .btn-outline {
+    border: 1px solid #ddd;
+    background: #ffffff;
+    border-radius: 3px;
+    color: #262626; }
+
+[type=button],
+[type=submit],
+button {
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+.navbar {
+  background: #039be5;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  line-height: 3;
+  max-height: 4rem; }
+  .navbar > div {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto; }
+  .navbar a {
+    color: #ffffff;
+    text-decoration: none; }
+  .navbar-sidebar-toggle {
+    left: 0;
+    position: relative;
+    text-indent: -99999rem; }
+    .navbar-sidebar-toggle:before {
+      content: "";
+      display: block;
+      border-top: 0.375rem double #ffffff;
+      border-bottom: 0.125rem solid #ffffff;
+      height: 0.125rem;
+      position: absolute;
+      text-indent: 0;
+      top: 50%;
+      width: 1.3rem;
+      -webkit-transform: translate(0px, -50%);
+      -ms-transform: translate(0px, -50%);
+      transform: translate(0px, -50%); }
+
+
+.logo {
+            background-image: url('https://blog.inspireui.com/media/website/logo.png');
+            background-size: auto 2rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: inline-block;
+  font-weight: 600;
+  line-height: 1;
+            margin: 0 auto;
+            height: 2rem;
+            text-indent: -9999px;
+            width: 240px;vertical-align: middle;
+        }
+        .logo.logo-text {
+            line-height: 2;
+            text-align: center;
+            text-indent: 0;
+        }
+
+amp-sidebar {
+  background: #ffffff;
+  width: 240px; }
+  amp-sidebar > ul {
+    margin: 0.8rem 0 0;
+    padding: 0; }
+    amp-sidebar > ul ul {
+      border-left: 1px solid #d4d4d4;
+      margin: 0.53333rem 0 0; }
+    amp-sidebar > ul li {
+      color: #262626;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      list-style: none;
+      line-height: 1.4;
+      padding: 0.42667rem 1.06667rem; }
+      amp-sidebar > ul li li {
+        font-weight: normal;
+        padding: 0.26667rem 0 0.26667rem 1.06667rem; }
+    amp-sidebar > ul a,
+    amp-sidebar > ul a:visited {
+      color: #262626; }
+
+.bg-white {
+  background: #ffffff; }
+
+.wrap-page {
+  max-width: 700px;
+  margin: 0 auto; }
+
+@media all and (max-width: 43.6875em) {
+  .wrap-inner {
+    padding: 0 6%; } }
+
+.page-title {
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  margin-bottom: 0.8rem;
+  padding: 1.6rem 6%; }
+  .page-title > h1 {
+    margin: 0;
+    font-size: 1.29454rem; }
+  .page-title > p {
+    font-size: 0.87891rem;
+    color: #6c7175;
+    line-height: 1.3;
+    margin: 0.26667rem 0 0; }
+  .page-title-author {
+    border-radius: 50%;
+    float: left;
+    height: 2.5rem;
+    width: 2.5rem; }
+    .page-title-author + h1 {
+      margin-left: 3.5rem; }
+      .page-title-author + h1 + p {
+        margin-left: 3.5rem; }
+
+.card {
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  margin-bottom: 0.8rem;
+  padding-bottom: 1.06667rem; }
+
+  .card-meta {
+    border-top: 1px solid #d4d4d4;
+    color: rgba(108, 113, 117, 0.6);
+    font-size: 0.7242rem;
+    font-weight: 500;
+    margin-top: 1.06667rem;
+    padding-top: 1.06667rem;
+    text-transform: uppercase; }
+    .card-meta a + time:before {
+      content: "";
+      background: #d4d4d4;
+      display: inline-block;
+      height: 3px;
+      margin: 0 8px;
+      width: 3px;
+      vertical-align: middle;
+      border-radius: 50%; }
+  .card-text {
+    font-size: 0.9375rem;
+    overflow: hidden;
+    padding: 0 6%; }
+    .card-text h2 {
+      font-size: 1.13778rem; }
+
+.post {
+  margin-bottom: 2.13333rem; }
+  .post-featured-image {
+    margin-top: 0;
+    position: relative; }
+    .post-featured-image > figcaption {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 3px;
+      color: #ffffff;
+      position: absolute;
+      bottom: 0.8rem;
+      padding: 0 0.26667rem;
+      right: 6%; }
+  .post-header {
+    margin-bottom: 2.13333rem; }
+  .post-meta {
+    border-bottom: 1px solid #d4d4d4;
+    color: rgba(108, 113, 117, 0.6);
+    font-size: 0.7242rem;
+    font-weight: 500;
+    margin-top: 1.06667rem;
+    padding-bottom: 1.06667rem;
+    text-transform: uppercase; }
+    .post-meta a + time:before {
+      content: "";
+      background: #d4d4d4;
+      display: inline-block;
+      height: 3px;
+      margin: 0 8px;
+      width: 3px;
+      vertical-align: middle;
+      border-radius: 50%; }
+  .post-tag {
+    margin: 0; }
+    .post-tag > li {
+      display: inline-block;
+      padding: 0; }
+      .post-tag > li a {
+        background: #f1f1f1;
+        border-radius: 2px;
+        color: #6c7175;
+        font-size: 0.77248rem;
+        display: inline-block;
+        margin: 0 0.26667rem 0.26667rem 0;
+        padding: 0.26667rem 0.53333rem; }
+        .post-tag > li a:hover {
+          background: #039be5;
+          color: #ffffff;
+          text-decoration: none; }
+  .post-share {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 1.6rem;
+    width: 100%; }
+    .post-share amp-social-share {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+      background-size: 24px; }
+  .post-scroll {
+    color: #ffffff;
+    background: #039be5;
+    bottom: 10px;
+    border-radius: 50%;
+    border: none;
+    -webkit-box-shadow: 0 1px 1.5px 0 rgba(38, 38, 38, 0.12), 0 1px 1px 0 rgba(38, 38, 38, 0.24);
+    box-shadow: 0 1px 1.5px 0 rgba(38, 38, 38, 0.12), 0 1px 1px 0 rgba(38, 38, 38, 0.24);
+    font-size: 1.13778rem;
+    height: 46px;
+    opacity: 0;
+    outline: none;
+    position: fixed;
+    padding: 0;
+    right: 4%;
+    visibility: hidden;
+    width: 46px;
+    z-index: 9999; }
+    .post-scroll-marker {
+      height: 0px;
+      position: absolute;
+      top: 100px;
+      width: 0px; }
+        .post-pagination {
+    background: #f1f1f1;
+    -webkit-box-shadow: inset 0 2px 3px rgba(38, 38, 38, 0.1);
+    box-shadow: inset 0 2px 3px rgba(38, 38, 38, 0.1);
+    border-top: 1px solid #d4d4d4;
+    padding: 1.06667rem 0; }
+    .post-pagination > div {
+      line-height: 1.2;
+      padding: 0.53333rem 1.06667rem;
+      text-align: center; }
+      .post-pagination > div span {
+        display: block;
+        color: #6c7175;
+        font-size: 0.7242rem;
+        font-weight: 500;
+        margin-bottom: 0.26667rem;
+        text-transform: uppercase; }
+    .post-pagination-prev a:before {
+      content: "\2190";
+      margin-right: 0.26667rem; }
+    .post-pagination-next a:after {
+      content: "\2192";
+      margin-left: 0.26667rem; }
+
+aside {
+  margin: 1.6rem 0 0; }
+
+.align-left {
+  text-align: left; }
+
+.align-right {
+  text-align: right; }
+
+.align-center {
+  text-align: center; }
+
+.align-justify {
+  text-align: justify; }
+
+.msg {
+  border-left: 2px solid transparent;
+  padding: 1.06667rem 1.06667rem; }
+  .msg--highlight {
+    background-color: #fff8e6;
+    border-color: #e2ac4f; }
+  .msg--info {
+    background: rgba(45, 97, 201, 0.03);
+    border-color: #039be5; }
+  .msg--success {
+    background: #f7fbf6;
+    border-color: #5ab44b; }
+  .msg--warning {
+    background: #fff3f3;
+    border-color: #c06367;
+    color: #a94442; }
+
+.dropcap:first-letter {
+  float: left;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 2.16943rem;
+  line-height: 0.7;
+  margin-right: 0.53333rem;
+  padding: 0.53333rem 0.53333rem 0.53333rem 0; }
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0.8rem 0; }
+  .pagination > a {
+    padding-left: 0;
+    padding-right: 0;
+    width: 49%; }
+  .pagination-right {
+    margin-left: auto; }
+
+.bottom {
+  background: #039be5;
+  color: #ffffff;
+  padding: 1.06667rem 4%;
+  text-align: center; }
+
+    /*
+ * Put your custom CSS code here (it will be used only in AMP mode)
+ */</style><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><script async src="https://cdn.ampproject.org/v0.js"></script><script custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js" async></script><script custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js" async></script></head><body class="bg-white"><nav class="navbar wrap-inner" id="top"><div><a on="tap:navbar-sidebar.toggle" class="navbar-sidebar-toggle" title="Menu">Menu</a> <a class="logo" href="https://blog.inspireui.com/amp/">InspireUI Blog</a></div></nav><main class="wrap-page"><article class="post"><figure class="post-featured-image"><amp-img src="https://blog.inspireui.com/media/posts/24/1_LUCiQp5QDdquwpjt83JhyQ.png" alt="" srcset="https://blog.inspireui.com/media/posts/24/responsive/1_LUCiQp5QDdquwpjt83JhyQ-xs.webp 600w ,https://blog.inspireui.com/media/posts/24/responsive/1_LUCiQp5QDdquwpjt83JhyQ-sm.webp 1000w ,https://blog.inspireui.com/media/posts/24/responsive/1_LUCiQp5QDdquwpjt83JhyQ-md.webp 1200w" sizes="(max-width: 768px) 100vw, 768px" height="924" layout="responsive" width="1400"></amp-img></figure><div class="wrap-inner"><header class="post-header"><h1>Announcing FluxBuilder 1.3.x</h1><p class="post-meta">By <a href="https://blog.inspireui.com/amp/authors/inspireui/" rel="nofollow" title="InspireUI">InspireUI</a> <time datetime="2021-08-01T16:00">Aug 1, 2021</time></p></header><div class="ir is it iu iv"><blockquote class="jv jw jx"><p id="1eb7" class="jy jz ka kb b kc kd ke kf kg kh ki kj kk kl km kn ko kp kq kr ks kt ku kv kw ir ga" data-selectable-paragraph="">- InspireUI here 🙌, we are working hard to upgrade the drag and drop <a class="au kx" href="https://fluxbuilder.com/" rel="noopener ugc nofollow" target="_blank">FluxBuilder</a> tool to be more functionalities, in order to support your <a class="au kx" href="https://1.envato.market/mKdNe" rel="noopener ugc nofollow" target="_blank">FluxStore</a> applications customization easier.<br>- Remember to use the <a class="au kx" href="https://github.com/inspireui/fluxbuilder/releases" rel="noopener ugc nofollow" target="_blank">latest FluxBuilder</a>.<br>- 👉 Subscribe our new Telegram Channel <a class="au kx" href="https://t.me/inspireui" rel="noopener ugc nofollow" target="_blank">https://t.me/inspireui</a></p></blockquote><h1 id="351f" class="ky kz iy bm la lb lc ld le lf lg lh li lj lk ll lm ln lo lp lq lr ls lt lu lv ga" data-selectable-paragraph="">What’s new in Version 1.3.x ?</h1><pre class="lw lx ly lz gx ma bs mb mc dz md"><span id="d9a1" class="ga me kz iy md b dm mf mg l mh mi" data-selectable-paragraph="">1. New AppBar ⭐️<br>2. New Templates📱<br>3. New Side Menu✨<br>4. New Settings Screen🍀<br>5. New Product Horizontal💥<br>6. Many Improvements💫</span></pre><figure class="lw lx ly lz gx mk gl gm paragraph-image"><div class="gl gm mj"><figure class="ce ml mm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*PnbrENxmxvO3oqI8B-eHjg.gif 640w, https://miro.medium.com/max/720/1*PnbrENxmxvO3oqI8B-eHjg.gif 720w, https://miro.medium.com/max/750/1*PnbrENxmxvO3oqI8B-eHjg.gif 750w, https://miro.medium.com/max/786/1*PnbrENxmxvO3oqI8B-eHjg.gif 786w, https://miro.medium.com/max/828/1*PnbrENxmxvO3oqI8B-eHjg.gif 828w, https://miro.medium.com/max/1100/1*PnbrENxmxvO3oqI8B-eHjg.gif 1100w, https://miro.medium.com/max/1280/1*PnbrENxmxvO3oqI8B-eHjg.gif 1280w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 640px"><amp-img role="presentation" src="https://miro.medium.com/max/1280/1*PnbrENxmxvO3oqI8B-eHjg.gif" alt="" width="640" height="360" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></figure><h2 id="e4d9" class="me kz iy bm la mn mo mp le mq mr ms li mt mu mv lm mw mx my lq mz na nb lu nc ga" data-selectable-paragraph="">1. New App Bar ⭐️</h2><p id="9bee" class="pw-post-body-paragraph jy jz iy kb b kc nd ke kf kg ne ki kj mt nf km kn mw ng kq kr mz nh ku kv kw ir ga" data-selectable-paragraph="">Similar to the bottom TabBar that we have updated on version 1.2.x, now it is possible to control the AppBar template or customize the design properties.</p><p id="3a39" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj mt kl km kn mw kp kq kr mz kt ku kv kw ir ga" data-selectable-paragraph="">AppBar can be enabled on many screens and support many types, such as Text, Icon, Search, Location, Image.</p><figure class="lw lx ly lz gx mk gl gm paragraph-image"><div class="nj nk do nl ce nm" tabindex="0" role="button"><div class="gl gm ni"><figure class="ce ml mm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*Eej0yxOwKbKo7uZmJ--xNw.png 640w, https://miro.medium.com/max/720/1*Eej0yxOwKbKo7uZmJ--xNw.png 720w, https://miro.medium.com/max/750/1*Eej0yxOwKbKo7uZmJ--xNw.png 750w, https://miro.medium.com/max/786/1*Eej0yxOwKbKo7uZmJ--xNw.png 786w, https://miro.medium.com/max/828/1*Eej0yxOwKbKo7uZmJ--xNw.png 828w, https://miro.medium.com/max/1100/1*Eej0yxOwKbKo7uZmJ--xNw.png 1100w, https://miro.medium.com/max/1400/1*Eej0yxOwKbKo7uZmJ--xNw.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*Eej0yxOwKbKo7uZmJ--xNw.png" alt="" width="700" height="455" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><figure class="lw lx ly lz gx mk gl gm paragraph-image"><div class="nj nk do nl ce nm" tabindex="0" role="button"><div class="gl gm ni"><figure class="ce ml mm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*QBE2pbbSKVUiTJTCMhh8ow.png 640w, https://miro.medium.com/max/720/1*QBE2pbbSKVUiTJTCMhh8ow.png 720w, https://miro.medium.com/max/750/1*QBE2pbbSKVUiTJTCMhh8ow.png 750w, https://miro.medium.com/max/786/1*QBE2pbbSKVUiTJTCMhh8ow.png 786w, https://miro.medium.com/max/828/1*QBE2pbbSKVUiTJTCMhh8ow.png 828w, https://miro.medium.com/max/1100/1*QBE2pbbSKVUiTJTCMhh8ow.png 1100w, https://miro.medium.com/max/1400/1*QBE2pbbSKVUiTJTCMhh8ow.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*QBE2pbbSKVUiTJTCMhh8ow.png" alt="" width="700" height="455" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><figure class="lw lx ly lz gx mk"><div class="m fs l do"><div class="nn no l"><div class="post__iframe"><amp-iframe sandbox="allow-scripts allow-same-origin" layout="responsive" width="854" height="480" src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FpPk4vufXDsY%3Ffeature%3Doembed&amp;display_name=YouTube&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DpPk4vufXDsY&amp;image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FpPk4vufXDsY%2Fhqdefault.jpg&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=youtube" allowfullscreen="allowfullscreen" frameborder="0" title="💥FluxBuilder #17: AppBar (App Builder - Flutter)" class="fo aq as ag ce" scrolling="auto" data-mce-fragment="1"></amp-iframe></div></div></div></figure></div><div class="o dx np nq id nr" role="separator"> </div><div class="ir is it iu iv"><h2 id="d73a" class="me kz iy bm la mn mo mp le mq mr ms li mt mu mv lm mw mx my lq mz na nb lu nc ga" data-selectable-paragraph="">2. New Design Templates📱</h2><p id="d9ae" class="pw-post-body-paragraph jy jz iy kb b kc nd ke kf kg ne ki kj mt nf km kn mw ng kq kr mz nh ku kv kw ir ga" data-selectable-paragraph="">This version adds 6 new templates for the Regular License, bringing the total number of templates for this license to 25.</p><p id="6f90" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj mt kl km kn mw kp kq kr mz kt ku kv kw ir ga" data-selectable-paragraph="">In addition, there is a wide range of new Attractive Templates available for the Extended License.</p><figure class="lw lx ly lz gx mk gl gm paragraph-image"><div class="nj nk do nl ce nm" tabindex="0" role="button"><div class="gl gm ni"><figure class="ce ml mm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*BiiA9-o6bi4HHk6zkDzW5w.png 640w, https://miro.medium.com/max/720/1*BiiA9-o6bi4HHk6zkDzW5w.png 720w, https://miro.medium.com/max/750/1*BiiA9-o6bi4HHk6zkDzW5w.png 750w, https://miro.medium.com/max/786/1*BiiA9-o6bi4HHk6zkDzW5w.png 786w, https://miro.medium.com/max/828/1*BiiA9-o6bi4HHk6zkDzW5w.png 828w, https://miro.medium.com/max/1100/1*BiiA9-o6bi4HHk6zkDzW5w.png 1100w, https://miro.medium.com/max/1400/1*BiiA9-o6bi4HHk6zkDzW5w.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*BiiA9-o6bi4HHk6zkDzW5w.png" alt="" width="700" height="455" loading="eager" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><figure class="lw lx ly lz gx mk gl gm paragraph-image"><div class="nj nk do nl ce nm" tabindex="0" role="button"><div class="gl gm nw"><figure class="ce ml mm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*LUCiQp5QDdquwpjt83JhyQ.png 640w, https://miro.medium.com/max/720/1*LUCiQp5QDdquwpjt83JhyQ.png 720w, https://miro.medium.com/max/750/1*LUCiQp5QDdquwpjt83JhyQ.png 750w, https://miro.medium.com/max/786/1*LUCiQp5QDdquwpjt83JhyQ.png 786w, https://miro.medium.com/max/828/1*LUCiQp5QDdquwpjt83JhyQ.png 828w, https://miro.medium.com/max/1100/1*LUCiQp5QDdquwpjt83JhyQ.png 1100w, https://miro.medium.com/max/1400/1*LUCiQp5QDdquwpjt83JhyQ.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*LUCiQp5QDdquwpjt83JhyQ.png" alt="" width="700" height="463" loading="eager" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><figure class="lw lx ly lz gx mk"><div class="m fs l do"><div class="nn no l"><div class="post__iframe"><amp-iframe sandbox="allow-scripts allow-same-origin" layout="responsive" width="854" height="480" src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FZ-q5cGxBVa8%3Ffeature%3Doembed&amp;display_name=YouTube&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DZ-q5cGxBVa8&amp;image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FZ-q5cGxBVa8%2Fhqdefault.jpg&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=youtube" allowfullscreen="allowfullscreen" frameborder="0" title="💥FluxBuilder #14: new Templates (App Builder - Flutter)" class="fo aq as ag ce" scrolling="auto" data-mce-fragment="1"></amp-iframe></div></div></div></figure></div><div class="o dx np nq id nr" role="separator"> </div><div class="ir is it iu iv"><h2 id="111d" class="me kz iy bm la mn mo mp le mq mr ms li mt mu mv lm mw mx my lq mz na nb lu nc ga" data-selectable-paragraph="">3. New Side Menu ✨</h2><p id="8b58" class="pw-post-body-paragraph jy jz iy kb b kc nd ke kf kg ne ki kj mt nf km kn mw ng kq kr mz nh ku kv kw ir ga" data-selectable-paragraph="">A more flexible way to manage the extra menu items from the left side menu:</p><ul><li id="2c2b" class="nx ny iy kb b kc kd kg kh mt nz mw oa mz ob kw oc od oe of ga" data-selectable-paragraph="">Ability to add New items and drag to reorder the items.</li><li id="5d8e" class="nx ny iy kb b kc og kg oh mt oi mw oj mz ok kw oc od oe of ga" data-selectable-paragraph="">Setting the <strong class="kb iz">Require Login </strong>menu item (only view after logging in).</li><li id="b0b7" class="nx ny iy kb b kc og kg oh mt oi mw oj mz ok kw oc od oe of ga" data-selectable-paragraph="">Viewing the content under the Webview mode.</li><li id="bc39" class="nx ny iy kb b kc og kg oh mt oi mw oj mz ok kw oc od oe of ga" data-selectable-paragraph="">Linking to the Wordpress Blog/Page by ID.</li><li id="5f5e" class="nx ny iy kb b kc og kg oh mt oi mw oj mz ok kw oc od oe of ga" data-selectable-paragraph="">Changing the menu Icon from Cupertino or Material collection.</li><li id="f37c" class="nx ny iy kb b kc og kg oh mt oi mw oj mz ok kw oc od oe of ga" data-selectable-paragraph="">Grouping the menu item by using Section Label and Divider or custom color.</li></ul><figure class="lw lx ly lz gx mk gl gm paragraph-image"><div class="nj nk do nl ce nm" tabindex="0" role="button"><div class="gl gm ni"><figure class="ce ml mm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*DYrran0jC4ibI76P2IQ5_g.png 640w, https://miro.medium.com/max/720/1*DYrran0jC4ibI76P2IQ5_g.png 720w, https://miro.medium.com/max/750/1*DYrran0jC4ibI76P2IQ5_g.png 750w, https://miro.medium.com/max/786/1*DYrran0jC4ibI76P2IQ5_g.png 786w, https://miro.medium.com/max/828/1*DYrran0jC4ibI76P2IQ5_g.png 828w, https://miro.medium.com/max/1100/1*DYrran0jC4ibI76P2IQ5_g.png 1100w, https://miro.medium.com/max/1400/1*DYrran0jC4ibI76P2IQ5_g.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*DYrran0jC4ibI76P2IQ5_g.png" alt="" width="700" height="455" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><figure class="lw lx ly lz gx mk gl gm paragraph-image"><div class="nj nk do nl ce nm" tabindex="0" role="button"><div class="gl gm ni"><figure class="ce ml mm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*MmX6bZVN2UdKsJf_eTkFLA.png 640w, https://miro.medium.com/max/720/1*MmX6bZVN2UdKsJf_eTkFLA.png 720w, https://miro.medium.com/max/750/1*MmX6bZVN2UdKsJf_eTkFLA.png 750w, https://miro.medium.com/max/786/1*MmX6bZVN2UdKsJf_eTkFLA.png 786w, https://miro.medium.com/max/828/1*MmX6bZVN2UdKsJf_eTkFLA.png 828w, https://miro.medium.com/max/1100/1*MmX6bZVN2UdKsJf_eTkFLA.png 1100w, https://miro.medium.com/max/1400/1*MmX6bZVN2UdKsJf_eTkFLA.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*MmX6bZVN2UdKsJf_eTkFLA.png" alt="" width="700" height="455" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><figure class="lw lx ly lz gx mk"><div class="m fs l do"><div class="nn no l"><div class="post__iframe"><amp-iframe sandbox="allow-scripts allow-same-origin" layout="responsive" width="854" height="480" src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FiSeKOTXdw0Q%3Ffeature%3Doembed&amp;display_name=YouTube&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DiSeKOTXdw0Q&amp;image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FiSeKOTXdw0Q%2Fhqdefault.jpg&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=youtube" allowfullscreen="allowfullscreen" frameborder="0" title="💥FluxBuilder #13: new SideMenu (App Builder - Flutter)" class="fo aq as ag ce" scrolling="auto" data-mce-fragment="1"></amp-iframe></div></div></div></figure></div><div class="o dx np nq id nr" role="separator"> </div><div class="ir is it iu iv"><h2 id="3d97" class="me kz iy bm la mn mo mp le mq mr ms li mt mu mv lm mw mx my lq mz na nb lu nc ga" data-selectable-paragraph="">4. New Settings Menu Items 🍀</h2><p id="2de4" class="pw-post-body-paragraph jy jz iy kb b kc nd ke kf kg ne ki kj mt nf km kn mw ng kq kr mz nh ku kv kw ir ga" data-selectable-paragraph="">Similar to the Left side menu, you are able to easily manage the menu items on the Settings screen (Profile). Quickly change the Drawer icon for Side menu button on Profile page.</p><figure class="lw lx ly lz gx mk gl gm paragraph-image"><div class="nj nk do nl ce nm" tabindex="0" role="button"><div class="gl gm ol"><figure class="ce ml mm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*m_zVqacGpGoWULIK-bOkpA.png 640w, https://miro.medium.com/max/720/1*m_zVqacGpGoWULIK-bOkpA.png 720w, https://miro.medium.com/max/750/1*m_zVqacGpGoWULIK-bOkpA.png 750w, https://miro.medium.com/max/786/1*m_zVqacGpGoWULIK-bOkpA.png 786w, https://miro.medium.com/max/828/1*m_zVqacGpGoWULIK-bOkpA.png 828w, https://miro.medium.com/max/1100/1*m_zVqacGpGoWULIK-bOkpA.png 1100w, https://miro.medium.com/max/1400/1*m_zVqacGpGoWULIK-bOkpA.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*m_zVqacGpGoWULIK-bOkpA.png" alt="" width="700" height="471" loading="eager" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><figure class="lw lx ly lz gx mk gl gm paragraph-image"><div class="nj nk do nl ce nm" tabindex="0" role="button"><div class="gl gm ni"><figure class="ce ml mm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*profEHWim6UCoJkdyeMauw.png 640w, https://miro.medium.com/max/720/1*profEHWim6UCoJkdyeMauw.png 720w, https://miro.medium.com/max/750/1*profEHWim6UCoJkdyeMauw.png 750w, https://miro.medium.com/max/786/1*profEHWim6UCoJkdyeMauw.png 786w, https://miro.medium.com/max/828/1*profEHWim6UCoJkdyeMauw.png 828w, https://miro.medium.com/max/1100/1*profEHWim6UCoJkdyeMauw.png 1100w, https://miro.medium.com/max/1400/1*profEHWim6UCoJkdyeMauw.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*profEHWim6UCoJkdyeMauw.png" alt="" width="700" height="455" loading="eager" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><figure class="lw lx ly lz gx mk"><div class="m fs l do"><div class="nn no l"><div class="post__iframe"><amp-iframe sandbox="allow-scripts allow-same-origin" layout="responsive" width="854" height="480" src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FQ98e85nIDTo%3Ffeature%3Doembed&amp;display_name=YouTube&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DQ98e85nIDTo&amp;image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FQ98e85nIDTo%2Fhqdefault.jpg&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=youtube" allowfullscreen="allowfullscreen" frameborder="0" title="💥FluxBuilder #15: new Settings/Profile (App Builder - Flutter)" class="fo aq as ag ce" scrolling="auto" data-mce-fragment="1"></amp-iframe></div></div></div></figure></div><div class="o dx np nq id nr" role="separator"> </div><div class="ir is it iu iv"><h2 id="d60a" class="me kz iy bm la mn mo mp le mq mr ms li mt mu mv lm mw mx my lq mz na nb lu nc ga" data-selectable-paragraph="">5. New Product Horizontal Settings 💥</h2><p id="7e26" class="pw-post-body-paragraph jy jz iy kb b kc nd ke kf kg ne ki kj mt nf km kn mw ng kq kr mz nh ku kv kw ir ga" data-selectable-paragraph="">Amazing! You now are able to customize the Product Card View and control the design by using superpower options:</p><ul><li id="7cdc" class="nx ny iy kb b kc kd kg kh mt nz mw oa mz ob kw oc od oe of ga" data-selectable-paragraph="">New Rows configuration &amp; Horizontal Options to control the Spacing, Image Ratio.</li><li id="412c" class="nx ny iy kb b kc og kg oh mt oi mw oj mz ok kw oc od oe of ga" data-selectable-paragraph="">Allow to show <strong class="kb iz">Cart Quantity</strong> and <strong class="kb iz">Add To Cart</strong> buttons (-/+).</li><li id="4e91" class="nx ny iy kb b kc og kg oh mt oi mw oj mz ok kw oc od oe of ga" data-selectable-paragraph="">Change the Cart Icon Color with the primary Color &amp; Border-radius.</li><li id="140a" class="nx ny iy kb b kc og kg oh mt oi mw oj mz ok kw oc od oe of ga" data-selectable-paragraph="">Variant or Booking Products can be quickly added to cart from the Product List by using the <strong class="kb iz">Cart Button Sheet</strong> option.</li><li id="7694" class="nx ny iy kb b kc og kg oh mt oi mw oj mz ok kw oc od oe of ga" data-selectable-paragraph="">New Background behind the Product List and more design options.</li></ul><figure class="lw lx ly lz gx mk gl gm paragraph-image"><div class="nj nk do nl ce nm" tabindex="0" role="button"><div class="gl gm ni"><figure class="ce ml mm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*XU-M9-mLApcB79NLWCBnDA.png 640w, https://miro.medium.com/max/720/1*XU-M9-mLApcB79NLWCBnDA.png 720w, https://miro.medium.com/max/750/1*XU-M9-mLApcB79NLWCBnDA.png 750w, https://miro.medium.com/max/786/1*XU-M9-mLApcB79NLWCBnDA.png 786w, https://miro.medium.com/max/828/1*XU-M9-mLApcB79NLWCBnDA.png 828w, https://miro.medium.com/max/1100/1*XU-M9-mLApcB79NLWCBnDA.png 1100w, https://miro.medium.com/max/1400/1*XU-M9-mLApcB79NLWCBnDA.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*XU-M9-mLApcB79NLWCBnDA.png" alt="" width="700" height="455" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><figure class="lw lx ly lz gx mk gl gm paragraph-image"><div class="nj nk do nl ce nm" tabindex="0" role="button"><div class="gl gm ni"><figure class="ce ml mm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*fcGWiYpxOnePT8eBH4nMhQ.png 640w, https://miro.medium.com/max/720/1*fcGWiYpxOnePT8eBH4nMhQ.png 720w, https://miro.medium.com/max/750/1*fcGWiYpxOnePT8eBH4nMhQ.png 750w, https://miro.medium.com/max/786/1*fcGWiYpxOnePT8eBH4nMhQ.png 786w, https://miro.medium.com/max/828/1*fcGWiYpxOnePT8eBH4nMhQ.png 828w, https://miro.medium.com/max/1100/1*fcGWiYpxOnePT8eBH4nMhQ.png 1100w, https://miro.medium.com/max/1400/1*fcGWiYpxOnePT8eBH4nMhQ.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*fcGWiYpxOnePT8eBH4nMhQ.png" alt="" width="700" height="455" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><figure class="lw lx ly lz gx mk gl gm paragraph-image"><div class="nj nk do nl ce nm" tabindex="0" role="button"><div class="gl gm ni"><figure class="ce ml mm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*ToyHwIQHQCc16kZajHr4iQ.png 640w, https://miro.medium.com/max/720/1*ToyHwIQHQCc16kZajHr4iQ.png 720w, https://miro.medium.com/max/750/1*ToyHwIQHQCc16kZajHr4iQ.png 750w, https://miro.medium.com/max/786/1*ToyHwIQHQCc16kZajHr4iQ.png 786w, https://miro.medium.com/max/828/1*ToyHwIQHQCc16kZajHr4iQ.png 828w, https://miro.medium.com/max/1100/1*ToyHwIQHQCc16kZajHr4iQ.png 1100w, https://miro.medium.com/max/1400/1*ToyHwIQHQCc16kZajHr4iQ.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*ToyHwIQHQCc16kZajHr4iQ.png" alt="" width="700" height="455" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><figure class="lw lx ly lz gx mk gl gm paragraph-image"><div class="nj nk do nl ce nm" tabindex="0" role="button"><div class="gl gm om"><figure class="ce ml mm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*UtjYpCqQwv6XcQXRjZEu8Q.png 640w, https://miro.medium.com/max/720/1*UtjYpCqQwv6XcQXRjZEu8Q.png 720w, https://miro.medium.com/max/750/1*UtjYpCqQwv6XcQXRjZEu8Q.png 750w, https://miro.medium.com/max/786/1*UtjYpCqQwv6XcQXRjZEu8Q.png 786w, https://miro.medium.com/max/828/1*UtjYpCqQwv6XcQXRjZEu8Q.png 828w, https://miro.medium.com/max/1100/1*UtjYpCqQwv6XcQXRjZEu8Q.png 1100w, https://miro.medium.com/max/1400/1*UtjYpCqQwv6XcQXRjZEu8Q.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*UtjYpCqQwv6XcQXRjZEu8Q.png" alt="" width="700" height="467" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><figure class="lw lx ly lz gx mk gl gm paragraph-image"><div class="nj nk do nl ce nm" tabindex="0" role="button"><div class="gl gm om"><figure class="ce ml mm c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*HOkSSV_xsWbf6W6uG2mMWA.png 640w, https://miro.medium.com/max/720/1*HOkSSV_xsWbf6W6uG2mMWA.png 720w, https://miro.medium.com/max/750/1*HOkSSV_xsWbf6W6uG2mMWA.png 750w, https://miro.medium.com/max/786/1*HOkSSV_xsWbf6W6uG2mMWA.png 786w, https://miro.medium.com/max/828/1*HOkSSV_xsWbf6W6uG2mMWA.png 828w, https://miro.medium.com/max/1100/1*HOkSSV_xsWbf6W6uG2mMWA.png 1100w, https://miro.medium.com/max/1400/1*HOkSSV_xsWbf6W6uG2mMWA.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*HOkSSV_xsWbf6W6uG2mMWA.png" alt="" width="700" height="467" loading="lazy" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><figure class="lw lx ly lz gx mk"><div class="m fs l do"><div class="nn no l"><div class="post__iframe"><amp-iframe sandbox="allow-scripts allow-same-origin" layout="responsive" width="854" height="480" src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FA6cAG5uBFAQ&amp;display_name=YouTube&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DA6cAG5uBFAQ&amp;image=http%3A%2F%2Fi.ytimg.com%2Fvi%2FA6cAG5uBFAQ%2Fhqdefault.jpg&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=youtube" allowfullscreen="allowfullscreen" frameborder="0" title="💥FluxBuilder #16: Cart Quantity on Products Horizontal (App Builder - Flutter)" class="fo aq as ag ce" scrolling="auto" data-mce-fragment="1"></amp-iframe></div></div></div></figure></div><div class="o dx np nq id nr" role="separator"> </div><div class="ir is it iu iv"><h2 id="fc78" class="me kz iy bm la mn mo mp le mq mr ms li mt mu mv lm mw mx my lq mz na nb lu nc ga" data-selectable-paragraph="">6. Many Improvements and updates⚡️</h2><ul><li id="9de5" class="nx ny iy kb b kc nd kg ne mt on mw oo mz op kw oc od oe of ga" data-selectable-paragraph="">Support to upload the Logo Dart/Light theme from the Features Config.</li><li id="4bc6" class="nx ny iy kb b kc og kg oh mt oi mw oj mz ok kw oc od oe of ga" data-selectable-paragraph="">Allow updating the Splash screen.</li><li id="1382" class="nx ny iy kb b kc og kg oh mt oi mw oj mz ok kw oc od oe of ga" data-selectable-paragraph="">Enable/disable the TabBar.</li><li id="548d" class="nx ny iy kb b kc og kg oh mt oi mw oj mz ok kw oc od oe of ga" data-selectable-paragraph="">Support to preview the Webview that limit from previous 1.2.x</li><li id="48fe" class="nx ny iy kb b kc og kg oh mt oi mw oj mz ok kw oc od oe of ga" data-selectable-paragraph="">Support the translucent Side menu.</li><li id="7ae3" class="nx ny iy kb b kc og kg oh mt oi mw oj mz ok kw oc od oe of ga" data-selectable-paragraph="">Compatible with macOS System Theme.</li><li id="1efb" class="nx ny iy kb b kc og kg oh mt oi mw oj mz ok kw oc od oe of ga" data-selectable-paragraph="">The latest User Guide on FluxBuilder.</li></ul><figure class="lw lx ly lz gx mk"><div class="m fs l do"><div class="nn no l"><div class="post__iframe"><amp-iframe sandbox="allow-scripts allow-same-origin" layout="responsive" width="854" height="480" src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F1RLRnvWoCA4%3Ffeature%3Doembed&amp;display_name=YouTube&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D1RLRnvWoCA4&amp;image=https%3A%2F%2Fi.ytimg.com%2Fvi%2F1RLRnvWoCA4%2Fhqdefault.jpg&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=youtube" allowfullscreen="allowfullscreen" frameborder="0" title="💥FluxBuilder #18: Splash screen (App Builder - Flutter)" class="fo aq as ag ce" scrolling="auto" data-mce-fragment="1"></amp-iframe></div></div></div></figure></div><div class="o dx np nq id nr" role="separator"> </div><div class="ir is it iu iv"><h1 id="e8fa" class="ky kz iy bm la lb oq ld le lf or lh li lj os ll lm ln ot lp lq lr ou lt lu lv ga" data-selectable-paragraph="">What is next coming?</h1><p id="3e92" class="pw-post-body-paragraph jy jz iy kb b kc nd ke kf kg ne ki kj mt nf km kn mw ng kq kr mz nh ku kv kw ir ga" data-selectable-paragraph="">Our team is working as hard as possible to upgrade the FluxBuilder more stable and powerful. There are some next important milestones that will be coming soon:</p><ul><li id="bc3e" class="nx ny iy kb b kc kd kg kh mt nz mw oa mz ob kw oc od oe of ga" data-selectable-paragraph="">Release the stable <strong class="kb iz">Web version</strong>.</li><li id="cf5e" class="nx ny iy kb b kc og kg oh mt oi mw oj mz ok kw oc od oe of ga" data-selectable-paragraph="">Release the <strong class="kb iz">Mobile version </strong>that supports Real-Time Preview.</li><li id="8caa" class="nx ny iy kb b kc og kg oh mt oi mw oj mz ok kw oc od oe of ga" data-selectable-paragraph="">Release the <strong class="kb iz">Build on Cloud </strong>to support Windows users can build iOS applications.</li></ul><p id="7e1c" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj mt kl km kn mw kp kq kr mz kt ku kv kw ir ga" data-selectable-paragraph="">Please give some Tap ✋ if you like this blog. And don’t forget to Subscribe to our <a class="au kx" href="https://www.youtube.com/inspireui?sub_confirmation=1" rel="noopener ugc nofollow" target="_blank">Youtube Channel</a> for more tutorial videos. Thank you so much for your contributions to FluxStore and FluxBuilder products so far 🙏</p><p id="e01a" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj mt kl km kn mw kp kq kr mz kt ku kv kw ir ga" data-selectable-paragraph="">Feel free to let us know if you have any queries ❤️</p></div><aside><ul class="post-tag"><li><a href="https://blog.inspireui.com/amp/tags/fluxbuilder/">FluxBuilder</a></li></ul><div class="post-share"><amp-social-share type="system" width="40" height="40" data-param-text="Announcing FluxBuilder 1.3.x"></amp-social-share><amp-social-share type="facebook" width="40" height="40" data-param-app_id="" data-param-text="Announcing FluxBuilder 1.3.x" data-param-href="https://blog.inspireui.com/amp/announcing-fluxbuilder-13x/"></amp-social-share><amp-social-share type="twitter" width="40" height="40" data-param-text="Announcing FluxBuilder 1.3.x" data-param-url="https://blog.inspireui.com/amp/announcing-fluxbuilder-13x/"></amp-social-share><amp-social-share type="pinterest" width="40" height="40" data-param-url="https://blog.inspireui.com/amp/announcing-fluxbuilder-13x/"></amp-social-share><amp-social-share type="tumblr" width="40" height="40" data-param-text="Announcing FluxBuilder 1.3.x" data-param-url="https://blog.inspireui.com/amp/announcing-fluxbuilder-13x/"></amp-social-share><amp-social-share type="whatsapp" width="40" height="40" data-param-text="Announcing FluxBuilder 1.3.x" data-param-url="https://blog.inspireui.com/amp/announcing-fluxbuilder-13x/"></amp-social-share></div></aside></div></article></main><amp-animation id="showAnim" layout="nodisplay"><script type="application/json">{
+                    "duration": "200ms",
+                    "fill": "both",
+                    "iterations": "1",
+                    "direction": "alternate",
+                    "animations": [{
+                        "selector": ".post-scroll",
+                        "keyframes": [{
+                            "opacity": "1",
+                            "visibility": "visible",
+                            "transform": "scale(1)"
+                        }]
+                    }]
+                }</script></amp-animation><amp-animation id="hideAnim" layout="nodisplay"><script type="application/json">{
+                    "duration": "200ms",
+                    "fill": "both",
+                    "iterations": "1",
+                    "direction": "alternate",
+                    "animations": [{
+                        "selector": ".post-scroll",
+                        "keyframes": [{
+                            "opacity": "0",
+                            "visibility": "hidden",
+                            "transform": "scale(0.1)"
+                        }]
+                    }]
+                }</script></amp-animation><div class="post-scroll-marker"><amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay"></amp-position-observer></div><button class="post-scroll" on="tap:top.scrollTo(duration=200)">&#8593;</button><footer class="bottom">InspireUI Ltd</footer><amp-sidebar id="navbar-sidebar" layout="nodisplay"><ul><li><a href="https://inspireui.com" title="InspireUI Home">Home</a></li><li><a href="https://blog.inspireui.com/amp/" title="Blog">Blog</a></li><li><a href="https://blog.inspireui.com/amp/tags/showcase/" title="Blog">Showcase</a></li><li><a href="https://inspireui.com/products" title="Products">Products</a></li><li><a href="https://inspireui.com/about/" title="About Us">About</a><ul class="navbar__submenu level-2" aria-hidden="true"><li><a href="https://inspireui.com/about/" title="About Us" target="_self">About Us</a></li><li><a href="https://inspireui.com/privacy/" target="_self">Privacy Policy</a></li><li><a href="https://inspireui.com/privacy/" target="_self">Privacy Policy</a></li><li><a href="https://support.inspireui.com" title="Support" target="_self">Support</a></li><li><a href="https://inspireui.com/contact/" target="_self">Contact</a></li></ul></li></ul></amp-sidebar><amp-analytics type="googleanalytics" id="analytics1"><script type="application/json">{
+            "vars": {
+                "account": "UA-90561349-1"
+            },
+            "triggers": {
+                "trackPageview": {
+                    "on": "visible",
+                    "request": "pageview"
+                }
+            }
+        }</script></amp-analytics></body></html>

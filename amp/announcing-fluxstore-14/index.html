@@ -1,0 +1,600 @@
+<!doctype html><html amp lang="en-gb"><head><meta charset="utf-8"><title>Announcing Fluxstore 1.4 - InspireUI Blog</title><meta name="description" content="InspireUI - Elegant Flutter & React Native mobile app. All-in-one mobile solutions and services for Startups, Developers, Entrepreneurs and more"><link rel="canonical" href="https://blog.inspireui.com/announcing-fluxstore-14/"><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" type="text/css"><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.inspireui.com/amp/announcing-fluxstore-14/"},"headline":"Announcing Fluxstore 1.4","datePublished":"2019-08-14T14:22","dateModified":"2022-11-02T14:25","image":{"@type":"ImageObject","url":"https://blog.inspireui.com/media/posts/3/1_6DJ61dvEzGI41IRBwRiATg.png","height":639,"width":1144},"description":"InspireUI - Elegant Flutter & React Native mobile app. All-in-one mobile solutions and services for Startups, Developers, Entrepreneurs and more","author":{"@type":"Person","name":"InspireUI","url":"https://blog.inspireui.com/amp/authors/inspireui/"},"publisher":{"@type":"Organization","name":"InspireUI","logo":{"@type":"ImageObject","url":"https://blog.inspireui.com/media/website/logo.png","height":600,"width":600}}}</script><style amp-custom>article,
+aside,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+amp-img {
+  max-width: 100%; }
+
+button,
+input,
+select,
+textarea {
+  font: inherit; }
+
+html {
+  font-size: 1rem; }
+
+body {
+  background: #f1f1f1;
+  color: #262626;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.6; }
+
+a {
+  color:  #039be5;
+  text-decoration: none;
+  -webkit-transition: all 0.12s linear 0s;
+  -o-transition: all 0.12s linear 0s;
+  transition: all 0.12s linear 0s; }
+
+a:hover {
+  color: #262626;
+  text-decoration: underline;
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip: ink; }
+
+a:active {
+  color: #262626; }
+
+a:focus {
+  outline: 2px dotted #039be5; }
+
+figure,
+blockquote,
+p,
+ul,
+ol,
+dl,
+table,
+hr,
+fieldset {
+  margin-top: 1.6rem; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #262626;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 2.13333rem; }
+
+h1 {
+  font-size: 1.67583rem;
+  font-weight: normal; }
+
+h2 {
+  font-size: 1.4729rem; }
+
+h3 {
+  font-size: 1.29454rem; }
+
+h4 {
+  font-size: 1.13778rem; }
+
+h5 {
+  font-size: 1rem; }
+
+h6 {
+  font-size: 0.87891rem; }
+
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+  margin-top: 0.8rem; }
+
+b,
+strong {
+  font-weight: 600; }
+
+blockquote {
+  color: #6c7175;
+  font-family: "Droid Serif", "Times", "Source Serif Pro", serif;
+  font-style: italic;
+  padding: 1.33333rem 0.53333rem 1.33333rem 3.2rem;
+  position: relative; }
+  blockquote:before {
+    display: block;
+    content: "\201C";
+    font-size: 4.41226rem;
+    position: absolute;
+    left: 0;
+    top: -12px;
+    color: rgba(108, 113, 117, 0.5); }
+  blockquote > :nth-child(1) {
+    margin-top: 0; }
+
+ul,
+ol {
+  margin-left: 2rem; }
+  ul > li,
+  ol > li {
+    list-style: inherit;
+    padding: 0 0 0.26667rem 0.26667rem; }
+
+dl dt {
+  color: #262626;
+  font-weight: 600; }
+
+code,
+pre {
+  background-color: #f1f1f1;
+  font-family: monospace; }
+
+pre {
+  margin: 1.6rem 0 0;
+  padding: 1.6rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto; }
+  pre > code {
+    color: #262626;
+    padding: 0; }
+
+code {
+  border-radius: 3px;
+  color: #262626;
+  padding: 0.26667rem 0.53333rem; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #d4d4d4;
+  width: 100%;
+  overflow-x: auto;
+  vertical-align: top;
+  text-align: left;
+  white-space: nowrap; }
+  table th {
+    font-weight: 500;
+    padding: 0.53333rem 1.06667rem; }
+  table tr {
+    border-bottom: 1px solid #d4d4d4; }
+    table tr:nth-child(2n) {
+      background: #f1f1f1; }
+  table td {
+    padding: 0.53333rem 1.06667rem; }
+
+figcaption {
+  clear: both;
+  color: rgba(108, 113, 117, 0.6);
+  font-size: 0.82397rem;
+  margin: 0.8rem 0 0;
+  text-align: center; }
+
+sub,
+sup {
+  font-size: 65%; }
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+
+.btn, [type=button],
+[type=submit],
+button {
+  background: #039be5;
+  border: none;
+  border-radius: 2px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.87891rem;
+  font-weight: 500;
+  line-height: 1.9;
+  padding: 0.53333rem 1.33333rem;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all .15s ease;
+  -o-transition: all .15s ease;
+  transition: all .15s ease;
+  width: auto; }
+  .btn:hover, [type=button]:hover,
+  [type=submit]:hover,
+  button:hover {
+    background: #262626;
+    color: #ffffff; }
+  .btn:focus, [type=button]:focus,
+  [type=submit]:focus,
+  button:focus {
+    outline: none; }
+  .btn-outline {
+    border: 1px solid #ddd;
+    background: #ffffff;
+    border-radius: 3px;
+    color: #262626; }
+
+[type=button],
+[type=submit],
+button {
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+.navbar {
+  background: #039be5;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  line-height: 3;
+  max-height: 4rem; }
+  .navbar > div {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto; }
+  .navbar a {
+    color: #ffffff;
+    text-decoration: none; }
+  .navbar-sidebar-toggle {
+    left: 0;
+    position: relative;
+    text-indent: -99999rem; }
+    .navbar-sidebar-toggle:before {
+      content: "";
+      display: block;
+      border-top: 0.375rem double #ffffff;
+      border-bottom: 0.125rem solid #ffffff;
+      height: 0.125rem;
+      position: absolute;
+      text-indent: 0;
+      top: 50%;
+      width: 1.3rem;
+      -webkit-transform: translate(0px, -50%);
+      -ms-transform: translate(0px, -50%);
+      transform: translate(0px, -50%); }
+
+
+.logo {
+            background-image: url('https://blog.inspireui.com/media/website/logo.png');
+            background-size: auto 2rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: inline-block;
+  font-weight: 600;
+  line-height: 1;
+            margin: 0 auto;
+            height: 2rem;
+            text-indent: -9999px;
+            width: 240px;vertical-align: middle;
+        }
+        .logo.logo-text {
+            line-height: 2;
+            text-align: center;
+            text-indent: 0;
+        }
+
+amp-sidebar {
+  background: #ffffff;
+  width: 240px; }
+  amp-sidebar > ul {
+    margin: 0.8rem 0 0;
+    padding: 0; }
+    amp-sidebar > ul ul {
+      border-left: 1px solid #d4d4d4;
+      margin: 0.53333rem 0 0; }
+    amp-sidebar > ul li {
+      color: #262626;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      list-style: none;
+      line-height: 1.4;
+      padding: 0.42667rem 1.06667rem; }
+      amp-sidebar > ul li li {
+        font-weight: normal;
+        padding: 0.26667rem 0 0.26667rem 1.06667rem; }
+    amp-sidebar > ul a,
+    amp-sidebar > ul a:visited {
+      color: #262626; }
+
+.bg-white {
+  background: #ffffff; }
+
+.wrap-page {
+  max-width: 700px;
+  margin: 0 auto; }
+
+@media all and (max-width: 43.6875em) {
+  .wrap-inner {
+    padding: 0 6%; } }
+
+.page-title {
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  margin-bottom: 0.8rem;
+  padding: 1.6rem 6%; }
+  .page-title > h1 {
+    margin: 0;
+    font-size: 1.29454rem; }
+  .page-title > p {
+    font-size: 0.87891rem;
+    color: #6c7175;
+    line-height: 1.3;
+    margin: 0.26667rem 0 0; }
+  .page-title-author {
+    border-radius: 50%;
+    float: left;
+    height: 2.5rem;
+    width: 2.5rem; }
+    .page-title-author + h1 {
+      margin-left: 3.5rem; }
+      .page-title-author + h1 + p {
+        margin-left: 3.5rem; }
+
+.card {
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  margin-bottom: 0.8rem;
+  padding-bottom: 1.06667rem; }
+
+  .card-meta {
+    border-top: 1px solid #d4d4d4;
+    color: rgba(108, 113, 117, 0.6);
+    font-size: 0.7242rem;
+    font-weight: 500;
+    margin-top: 1.06667rem;
+    padding-top: 1.06667rem;
+    text-transform: uppercase; }
+    .card-meta a + time:before {
+      content: "";
+      background: #d4d4d4;
+      display: inline-block;
+      height: 3px;
+      margin: 0 8px;
+      width: 3px;
+      vertical-align: middle;
+      border-radius: 50%; }
+  .card-text {
+    font-size: 0.9375rem;
+    overflow: hidden;
+    padding: 0 6%; }
+    .card-text h2 {
+      font-size: 1.13778rem; }
+
+.post {
+  margin-bottom: 2.13333rem; }
+  .post-featured-image {
+    margin-top: 0;
+    position: relative; }
+    .post-featured-image > figcaption {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 3px;
+      color: #ffffff;
+      position: absolute;
+      bottom: 0.8rem;
+      padding: 0 0.26667rem;
+      right: 6%; }
+  .post-header {
+    margin-bottom: 2.13333rem; }
+  .post-meta {
+    border-bottom: 1px solid #d4d4d4;
+    color: rgba(108, 113, 117, 0.6);
+    font-size: 0.7242rem;
+    font-weight: 500;
+    margin-top: 1.06667rem;
+    padding-bottom: 1.06667rem;
+    text-transform: uppercase; }
+    .post-meta a + time:before {
+      content: "";
+      background: #d4d4d4;
+      display: inline-block;
+      height: 3px;
+      margin: 0 8px;
+      width: 3px;
+      vertical-align: middle;
+      border-radius: 50%; }
+  .post-tag {
+    margin: 0; }
+    .post-tag > li {
+      display: inline-block;
+      padding: 0; }
+      .post-tag > li a {
+        background: #f1f1f1;
+        border-radius: 2px;
+        color: #6c7175;
+        font-size: 0.77248rem;
+        display: inline-block;
+        margin: 0 0.26667rem 0.26667rem 0;
+        padding: 0.26667rem 0.53333rem; }
+        .post-tag > li a:hover {
+          background: #039be5;
+          color: #ffffff;
+          text-decoration: none; }
+  .post-share {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 1.6rem;
+    width: 100%; }
+    .post-share amp-social-share {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+      background-size: 24px; }
+  .post-scroll {
+    color: #ffffff;
+    background: #039be5;
+    bottom: 10px;
+    border-radius: 50%;
+    border: none;
+    -webkit-box-shadow: 0 1px 1.5px 0 rgba(38, 38, 38, 0.12), 0 1px 1px 0 rgba(38, 38, 38, 0.24);
+    box-shadow: 0 1px 1.5px 0 rgba(38, 38, 38, 0.12), 0 1px 1px 0 rgba(38, 38, 38, 0.24);
+    font-size: 1.13778rem;
+    height: 46px;
+    opacity: 0;
+    outline: none;
+    position: fixed;
+    padding: 0;
+    right: 4%;
+    visibility: hidden;
+    width: 46px;
+    z-index: 9999; }
+    .post-scroll-marker {
+      height: 0px;
+      position: absolute;
+      top: 100px;
+      width: 0px; }
+        .post-pagination {
+    background: #f1f1f1;
+    -webkit-box-shadow: inset 0 2px 3px rgba(38, 38, 38, 0.1);
+    box-shadow: inset 0 2px 3px rgba(38, 38, 38, 0.1);
+    border-top: 1px solid #d4d4d4;
+    padding: 1.06667rem 0; }
+    .post-pagination > div {
+      line-height: 1.2;
+      padding: 0.53333rem 1.06667rem;
+      text-align: center; }
+      .post-pagination > div span {
+        display: block;
+        color: #6c7175;
+        font-size: 0.7242rem;
+        font-weight: 500;
+        margin-bottom: 0.26667rem;
+        text-transform: uppercase; }
+    .post-pagination-prev a:before {
+      content: "\2190";
+      margin-right: 0.26667rem; }
+    .post-pagination-next a:after {
+      content: "\2192";
+      margin-left: 0.26667rem; }
+
+aside {
+  margin: 1.6rem 0 0; }
+
+.align-left {
+  text-align: left; }
+
+.align-right {
+  text-align: right; }
+
+.align-center {
+  text-align: center; }
+
+.align-justify {
+  text-align: justify; }
+
+.msg {
+  border-left: 2px solid transparent;
+  padding: 1.06667rem 1.06667rem; }
+  .msg--highlight {
+    background-color: #fff8e6;
+    border-color: #e2ac4f; }
+  .msg--info {
+    background: rgba(45, 97, 201, 0.03);
+    border-color: #039be5; }
+  .msg--success {
+    background: #f7fbf6;
+    border-color: #5ab44b; }
+  .msg--warning {
+    background: #fff3f3;
+    border-color: #c06367;
+    color: #a94442; }
+
+.dropcap:first-letter {
+  float: left;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 2.16943rem;
+  line-height: 0.7;
+  margin-right: 0.53333rem;
+  padding: 0.53333rem 0.53333rem 0.53333rem 0; }
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0.8rem 0; }
+  .pagination > a {
+    padding-left: 0;
+    padding-right: 0;
+    width: 49%; }
+  .pagination-right {
+    margin-left: auto; }
+
+.bottom {
+  background: #039be5;
+  color: #ffffff;
+  padding: 1.06667rem 4%;
+  text-align: center; }
+
+    /*
+ * Put your custom CSS code here (it will be used only in AMP mode)
+ */</style><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><script async src="https://cdn.ampproject.org/v0.js"></script><script custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js" async></script><script custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js" async></script></head><body class="bg-white"><nav class="navbar wrap-inner" id="top"><div><a on="tap:navbar-sidebar.toggle" class="navbar-sidebar-toggle" title="Menu">Menu</a> <a class="logo" href="https://blog.inspireui.com/amp/">InspireUI Blog</a></div></nav><main class="wrap-page"><article class="post"><figure class="post-featured-image"><amp-img src="https://blog.inspireui.com/media/posts/3/1_6DJ61dvEzGI41IRBwRiATg.png" alt="" srcset="https://blog.inspireui.com/media/posts/3/responsive/1_6DJ61dvEzGI41IRBwRiATg-xs.webp 600w ,https://blog.inspireui.com/media/posts/3/responsive/1_6DJ61dvEzGI41IRBwRiATg-sm.webp 1000w ,https://blog.inspireui.com/media/posts/3/responsive/1_6DJ61dvEzGI41IRBwRiATg-md.webp 1200w" sizes="(max-width: 768px) 100vw, 768px" height="639" layout="responsive" width="1144"></amp-img></figure><div class="wrap-inner"><header class="post-header"><h1>Announcing Fluxstore 1.4</h1><p class="post-meta">By <a href="https://blog.inspireui.com/amp/authors/inspireui/" rel="nofollow" title="InspireUI">InspireUI</a> <time datetime="2019-08-14T14:22">Aug 14, 2019</time></p></header><div class="ir is it iu iv"><blockquote class="jv jw jx"><p id="16fb" class="jy jz ka kb b kc kd ke kf kg kh ki kj kk kl km kn ko kp kq kr ks kt ku kv kw ir ga" data-selectable-paragraph="">Hello from InspireUI, this is our regular update for the detailed changelog guide and roadmap for our product update.</p></blockquote><p id="653d" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj kx kl km kn ky kp kq kr kz kt ku kv kw ir ga" data-selectable-paragraph="">This version is an absolute powerful release that focuses on the layout User Interface and Experience, also adding a bunch of new configs, to make Fluxstore more powerful.</p><h1 id="1059" class="la lb iy bm lc ld le lf lg lh li lj lk ll lm ln lo lp lq lr ls lt lu lv lw lx ga" data-selectable-paragraph="">Overview</h1><ol><li id="a47a" class="ly lz iy kb b kc ma kg mb kx mc ky md kz me kw mf mg mh mi ga" data-selectable-paragraph="">Adding new 3 blog detail layout</li><li id="b0c5" class="ly lz iy kb b kc mj kg mk kx ml ky mm kz mn kw mf mg mh mi ga" data-selectable-paragraph="">Adding new 15 demo home screen layout</li><li id="4cfd" class="ly lz iy kb b kc mj kg mk kx ml ky mm kz mn kw mf mg mh mi ga" data-selectable-paragraph="">Adding new 5 category screen layout.</li><li id="323f" class="ly lz iy kb b kc mj kg mk kx ml ky mm kz mn kw mf mg mh mi ga" data-selectable-paragraph="">Adding more Vertical layout (Card, Pinterest, columns, list view) with lazy loading.</li><li id="ae03" class="ly lz iy kb b kc mj kg mk kx ml ky mm kz mn kw mf mg mh mi ga" data-selectable-paragraph="">Adding more Horizontal layout (metro, 4 columns, list, category menu, icon category, images category, more animate banner type Tinder/Swiper/Carousel).</li><li id="bbac" class="ly lz iy kb b kc mj kg mk kx ml ky mm kz mn kw mf mg mh mi ga" data-selectable-paragraph="">Support DeepLink.</li><li id="5a7a" class="ly lz iy kb b kc mj kg mk kx ml ky mm kz mn kw mf mg mh mi ga" data-selectable-paragraph="">Upgrading the Product Detail screen (Gallery, Video type, Out-Of-Stock), and new option config for Guest-Checkout, Shipping option, Affiliate Link.</li><li id="6b06" class="ly lz iy kb b kc mj kg mk kx ml ky mm kz mn kw mf mg mh mi ga" data-selectable-paragraph="">Update new config file.</li><li id="baf4" class="ly lz iy kb b kc mj kg mk kx ml ky mm kz mn kw mf mg mh mi ga" data-selectable-paragraph="">Product Roadmap.</li></ol></div><div class="o dx mo mp id mq" role="separator"> </div><div class="ir is it iu iv"><h1 id="1c92" class="la lb iy bm lc ld mv lf lg lh mw lj lk ll mx ln lo lp my lr ls lt mz lv lw lx ga" data-selectable-paragraph="">1. Adding new 3 blog detail layout</h1><figure class="nb nc nd ne gx nf gl gm paragraph-image"><div class="ng nh do ni ce nj" tabindex="0" role="button"><div class="gl gm na"><figure class="ce nk nl c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*6DJ61dvEzGI41IRBwRiATg.png 640w, https://miro.medium.com/max/720/1*6DJ61dvEzGI41IRBwRiATg.png 720w, https://miro.medium.com/max/750/1*6DJ61dvEzGI41IRBwRiATg.png 750w, https://miro.medium.com/max/786/1*6DJ61dvEzGI41IRBwRiATg.png 786w, https://miro.medium.com/max/828/1*6DJ61dvEzGI41IRBwRiATg.png 828w, https://miro.medium.com/max/1100/1*6DJ61dvEzGI41IRBwRiATg.png 1100w, https://miro.medium.com/max/1400/1*6DJ61dvEzGI41IRBwRiATg.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*6DJ61dvEzGI41IRBwRiATg.png" alt="" width="700" height="391" loading="eager" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><p id="2f84" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj kx kl km kn ky kp kq kr kz kt ku kv kw ir ga" data-selectable-paragraph="">Open <em class="ka">lib/common/config.dart </em>and change the config <strong class="kb iz">kBlogLayout</strong> to one of following <em class="ka">enum</em>: { simpleType, fullSizeImageType, halfSizeImageType, oneQuarterImageType }</p><pre class="nb nc nd ne gx nm bs nn no dz np"><span id="12fb" class="ga nq lb iy np b dm nr ns l nt nu" data-selectable-paragraph=""><strong class="np iz">const </strong>kAdvanceConfig = {<br>  "DetailedBlogLayout": kBlogLayout.halfSizeImageType<br>};</span></pre></div><div class="o dx mo mp id mq" role="separator"> </div><div class="ir is it iu iv"><h1 id="5a76" class="la lb iy bm lc ld mv lf lg lh mw lj lk ll mx ln lo lp my lr ls lt mz lv lw lx ga" data-selectable-paragraph="">2. Adding new +15 demo home screen layouts.</h1><p id="99f8" class="pw-post-body-paragraph jy jz iy kb b kc ma ke kf kg mb ki kj kx nv km kn ky nw kq kr kz nx ku kv kw ir ga" data-selectable-paragraph="">Open <strong class="kb iz"><em class="ka">lib/common/example/woocommerce/config_themeXX.json</em></strong><em class="ka"> </em>and copy the content to <strong class="kb iz"><em class="ka">lib/common/config.json </em></strong>to get the demo as following screenshots:</p><figure class="nb nc nd ne gx nf gl gm paragraph-image"><div class="ng nh do ni ce nj" tabindex="0" role="button"><div class="gl gm ny"><figure class="ce nk nl c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*b1fTycYlzxs-YJl6qGZoww.png 640w, https://miro.medium.com/max/720/1*b1fTycYlzxs-YJl6qGZoww.png 720w, https://miro.medium.com/max/750/1*b1fTycYlzxs-YJl6qGZoww.png 750w, https://miro.medium.com/max/786/1*b1fTycYlzxs-YJl6qGZoww.png 786w, https://miro.medium.com/max/828/1*b1fTycYlzxs-YJl6qGZoww.png 828w, https://miro.medium.com/max/1100/1*b1fTycYlzxs-YJl6qGZoww.png 1100w, https://miro.medium.com/max/1400/1*b1fTycYlzxs-YJl6qGZoww.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*b1fTycYlzxs-YJl6qGZoww.png" alt="" width="700" height="377" loading="eager" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><figure class="nb nc nd ne gx nf gl gm paragraph-image"><div class="ng nh do ni ce nj" tabindex="0" role="button"><div class="gl gm ny"><figure class="ce nk nl c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*SNa0LFUV_99XWT-oIHh9Ig.png 640w, https://miro.medium.com/max/720/1*SNa0LFUV_99XWT-oIHh9Ig.png 720w, https://miro.medium.com/max/750/1*SNa0LFUV_99XWT-oIHh9Ig.png 750w, https://miro.medium.com/max/786/1*SNa0LFUV_99XWT-oIHh9Ig.png 786w, https://miro.medium.com/max/828/1*SNa0LFUV_99XWT-oIHh9Ig.png 828w, https://miro.medium.com/max/1100/1*SNa0LFUV_99XWT-oIHh9Ig.png 1100w, https://miro.medium.com/max/1400/1*SNa0LFUV_99XWT-oIHh9Ig.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*SNa0LFUV_99XWT-oIHh9Ig.png" alt="" width="700" height="377" loading="eager" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><figure class="nb nc nd ne gx nf gl gm paragraph-image"><div class="ng nh do ni ce nj" tabindex="0" role="button"><div class="gl gm ny"><figure class="ce nk nl c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*uuKIf5kjm79zUBnSQfAwdw.png 640w, https://miro.medium.com/max/720/1*uuKIf5kjm79zUBnSQfAwdw.png 720w, https://miro.medium.com/max/750/1*uuKIf5kjm79zUBnSQfAwdw.png 750w, https://miro.medium.com/max/786/1*uuKIf5kjm79zUBnSQfAwdw.png 786w, https://miro.medium.com/max/828/1*uuKIf5kjm79zUBnSQfAwdw.png 828w, https://miro.medium.com/max/1100/1*uuKIf5kjm79zUBnSQfAwdw.png 1100w, https://miro.medium.com/max/1400/1*uuKIf5kjm79zUBnSQfAwdw.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*uuKIf5kjm79zUBnSQfAwdw.png" alt="" width="700" height="377" loading="eager" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><figure class="nb nc nd ne gx nf gl gm paragraph-image"><div class="ng nh do ni ce nj" tabindex="0" role="button"><div class="gl gm ny"><figure class="ce nk nl c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*-8TWGl_STIpG6S6pBPt_Jg.png 640w, https://miro.medium.com/max/720/1*-8TWGl_STIpG6S6pBPt_Jg.png 720w, https://miro.medium.com/max/750/1*-8TWGl_STIpG6S6pBPt_Jg.png 750w, https://miro.medium.com/max/786/1*-8TWGl_STIpG6S6pBPt_Jg.png 786w, https://miro.medium.com/max/828/1*-8TWGl_STIpG6S6pBPt_Jg.png 828w, https://miro.medium.com/max/1100/1*-8TWGl_STIpG6S6pBPt_Jg.png 1100w, https://miro.medium.com/max/1400/1*-8TWGl_STIpG6S6pBPt_Jg.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*-8TWGl_STIpG6S6pBPt_Jg.png" alt="" width="700" height="377" loading="eager" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure><blockquote class="jv jw jx"><p id="de6a" class="jy jz ka kb b kc kd ke kf kg kh ki kj kk kl km kn ko kp kq kr ks kt ku kv kw ir ga" data-selectable-paragraph="">Yes, it’s quite easy to change your own design base on the powerful widget from the app, try to make your own tuning Homepage.</p></blockquote></div><div class="o dx mo mp id mq" role="separator"> </div><div class="ir is it iu iv"><h1 id="0abc" class="la lb iy bm lc ld mv lf lg lh mw lj lk ll mx ln lo lp my lr ls lt mz lv lw lx ga" data-selectable-paragraph="">3. Adding new 5 category screen layout.</h1><p id="81df" class="pw-post-body-paragraph jy jz iy kb b kc ma ke kf kg mb ki kj kx nv km kn ky nw kq kr kz nx ku kv kw ir ga" data-selectable-paragraph="">Open <em class="ka">lib/common/config.dart </em>and change the config <strong class="kb iz">kCategoriesLayout</strong> to one of following enum values { <strong class="kb iz"><em class="ka">card, sideMenu, column, subCategories, animation, grid</em></strong>}</p><figure class="nb nc nd ne gx nf gl gm paragraph-image"><div class="ng nh do ni ce nj" tabindex="0" role="button"><div class="gl gm nz"><figure class="ce nk nl c"><source data-testid="og" srcset="https://miro.medium.com/max/640/1*qdqoFNrCQmDFfKsZr1IWRg.png 640w, https://miro.medium.com/max/720/1*qdqoFNrCQmDFfKsZr1IWRg.png 720w, https://miro.medium.com/max/750/1*qdqoFNrCQmDFfKsZr1IWRg.png 750w, https://miro.medium.com/max/786/1*qdqoFNrCQmDFfKsZr1IWRg.png 786w, https://miro.medium.com/max/828/1*qdqoFNrCQmDFfKsZr1IWRg.png 828w, https://miro.medium.com/max/1100/1*qdqoFNrCQmDFfKsZr1IWRg.png 1100w, https://miro.medium.com/max/1400/1*qdqoFNrCQmDFfKsZr1IWRg.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px"><amp-img role="presentation" src="https://miro.medium.com/max/1400/1*qdqoFNrCQmDFfKsZr1IWRg.png" alt="" width="700" height="360" loading="eager" data-is-external-image="true" layout="responsive"></amp-img></figure></div></div></figure></div><div class="o dx mo mp id mq" role="separator"> </div><div class="ir is it iu iv"><h1 id="267c" class="la lb iy bm lc ld mv lf lg lh mw lj lk ll mx ln lo lp my lr ls lt mz lv lw lx ga" data-selectable-paragraph="">4. Adding more Vertical layout</h1><p id="63e9" class="pw-post-body-paragraph jy jz iy kb b kc ma ke kf kg mb ki kj kx nv km kn ky nw kq kr kz nx ku kv kw ir ga" data-selectable-paragraph="">Open<em class="ka"> lib/common/config.json</em> and add new Vertical Section:</p><pre class="nb nc nd ne gx nm bs nn no dz np"><span id="4080" class="ga nq lb iy np b dm nr ns l nt nu" data-selectable-paragraph="">"VerticalLayout": {<br>  "layout": "pinterest",<br>  "name": {<br>    "en": "Recent Collections",<br>    "ab": "مجموعات الرجل",<br>    "vi": "Bộ sưu tập gần "<br>  }<br>},</span></pre><p id="2260" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj kx kl km kn ky kp kq kr kz kt ku kv kw ir ga" data-selectable-paragraph="">The Layout values:<strong class="kb iz"><em class="ka"> pinterest, menu, card, columns, list, default</em></strong></p></div><div class="o dx mo mp id mq" role="separator"> </div><div class="ir is it iu iv"><h1 id="1819" class="la lb iy bm lc ld mv lf lg lh mw lj lk ll mx ln lo lp my lr ls lt mz lv lw lx ga" data-selectable-paragraph="">5. Adding more Horizontal layout layout</h1><p id="5a80" class="pw-post-body-paragraph jy jz iy kb b kc ma ke kf kg mb ki kj kx nv km kn ky nw kq kr kz nx ku kv kw ir ga" data-selectable-paragraph="">Open<em class="ka"> lib/common/config.json</em> and add new HorizonLayout Section:</p><p id="2b81" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj kx kl km kn ky kp kq kr kz kt ku kv kw ir ga" data-selectable-paragraph=""><strong class="kb iz">Metro layout:</strong></p><pre class="nb nc nd ne gx nm bs nn no dz np"><span id="fae5" class="ga nq lb iy np b dm nr ns l nt nu" data-selectable-paragraph="">{<br>  "layout": "staggered",<br>  "limit": 20,<br>  "category": 29<br>}</span></pre><p id="d295" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj kx kl km kn ky kp kq kr kz kt ku kv kw ir ga" data-selectable-paragraph=""><strong class="kb iz">Simple ListView Layout</strong></p><pre class="nb nc nd ne gx nm bs nn no dz np"><span id="6dc8" class="ga nq lb iy np b dm nr ns l nt nu" data-selectable-paragraph="">{<br>  "layout": "simpleVerticalListItems"<br>}</span></pre><p id="b3dd" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj kx kl km kn ky kp kq kr kz kt ku kv kw ir ga" data-selectable-paragraph=""><strong class="kb iz">4 Columns Layout</strong></p><pre class="nb nc nd ne gx nm bs nn no dz np"><span id="7d6f" class="ga nq lb iy np b dm nr ns l nt nu" data-selectable-paragraph="">{<br>  "layout": "fourColumn",<br>  "category": 209<br>},</span></pre><p id="aeca" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj kx kl km kn ky kp kq kr kz kt ku kv kw ir ga" data-selectable-paragraph=""><strong class="kb iz">Tinder Banner</strong></p><pre class="nb nc nd ne gx nm bs nn no dz np"><span id="cd29" class="ga nq lb iy np b dm nr ns l nt nu" data-selectable-paragraph="">{<br>  "layout": "bannerImage",<br>  "isSlider": <strong class="np iz">true</strong>,<br>  "design": "tinder",<br>  "items": [<br>    {<br>      "category": 23,<br>      "image": "https://user-images.githubusercontent.com/1459805/59846818-12672e80-938b-11e9-8184-5f7bfe66f1a2.png",<br>      "padding": 15.0<br>    }<br>  ]<br>},</span></pre></div><div class="o dx mo mp id mq" role="separator"> </div><div class="ir is it iu iv"><h1 id="dde0" class="la lb iy bm lc ld mv lf lg lh mw lj lk ll mx ln lo lp my lr ls lt mz lv lw lx ga" data-selectable-paragraph="">6. Support DeepLink.</h1><p id="a7d1" class="pw-post-body-paragraph jy jz iy kb b kc ma ke kf kg mb ki kj kx nv km kn ky nw kq kr kz nx ku kv kw ir ga" data-selectable-paragraph="">Open the Simulator and Test the Deep link on your terminal</p><pre class="nb nc nd ne gx nm bs nn no dz np"><span id="7389" class="ga nq lb iy np b dm nr ns l nt nu" data-selectable-paragraph="">// ios<br>xcrun simctl openurl booted "fluxstore://inspireui.com/400"</span><span id="2106" class="ga nq lb iy np b dm oa ns l nt nu" data-selectable-paragraph="">// android<br> adb shell 'am start -W -a android.intent.action.VIEW -c android.intent.category.BROWSABLE -d "fluxstore://inspireui.com/400" '</span></pre></div><div class="o dx mo mp id mq" role="separator"> </div><div class="ir is it iu iv"><h1 id="52ab" class="la lb iy bm lc ld mv lf lg lh mw lj lk ll mx ln lo lp my lr ls lt mz lv lw lx ga" data-selectable-paragraph="">7. Upgrading the Product Features.</h1><p id="2bf8" class="pw-post-body-paragraph jy jz iy kb b kc ma ke kf kg mb ki kj kx nv km kn ky nw kq kr kz nx ku kv kw ir ga" data-selectable-paragraph="">Open <em class="ka">lib/common/config.dart </em>and change the value.</p><pre class="nb nc nd ne gx nm bs nn no dz np"><span id="3f17" class="ga nq lb iy np b dm nr ns l nt nu" data-selectable-paragraph=""><strong class="np iz">const </strong>kAdvanceConfig = {<br>  "DefaultCurrency": {"symbol": "\$", "decimalDigits": 2},<br>  "IsRequiredLogin": <strong class="np iz">false</strong>,<br>  "GuestCheckout": <strong class="np iz">true</strong>,<br>  "EnableShipping": <strong class="np iz">false</strong><br>};</span></pre><ul><li id="1e88" class="ly lz iy kb b kc kd kg kh kx ob ky oc kz od kw oe mg mh mi ga" data-selectable-paragraph=""><strong class="kb iz">DefaultCurrency</strong>: format the default currency</li><li id="2050" class="ly lz iy kb b kc mj kg mk kx ml ky mm kz mn kw oe mg mh mi ga" data-selectable-paragraph=""><strong class="kb iz">IsRequiredLogin</strong>: force the user login before using the app.</li><li id="a291" class="ly lz iy kb b kc mj kg mk kx ml ky mm kz mn kw oe mg mh mi ga" data-selectable-paragraph=""><strong class="kb iz">GuestCheckout: </strong>enable guest checkout, without require the login the user can still buy the product.</li><li id="7c43" class="ly lz iy kb b kc mj kg mk kx ml ky mm kz mn kw oe mg mh mi ga" data-selectable-paragraph=""><strong class="kb iz">EnableShipping</strong>: for skip the shipping info.</li></ul><blockquote class="jv jw jx"><p id="379f" class="jy jz ka kb b kc kd ke kf kg kh ki kj kk kl km kn ko kp kq kr ks kt ku kv kw ir ga" data-selectable-paragraph="">New release 1.4 also support for the <strong class="kb iz">Affiliate Product Type </strong>when you config the value from the WooCommerce site.</p></blockquote><pre class="nb nc nd ne gx nm bs nn no dz np"><span id="6274" class="ga nq lb iy np b dm nr ns l nt nu" data-selectable-paragraph=""><strong class="np iz">const </strong>kProductDetail = {<br>  "safeArea": <strong class="np iz">false</strong>,<br>  "showVideo": <strong class="np iz">true</strong>,<br>  "showThumbnaiAtLeast": 3<br>};</span></pre><ul><li id="9728" class="ly lz iy kb b kc kd kg kh kx ob ky oc kz od kw oe mg mh mi ga" data-selectable-paragraph=""><strong class="kb iz">safeArea</strong>: add new extra space on the top when view product detail.</li><li id="de9f" class="ly lz iy kb b kc mj kg mk kx ml ky mm kz mn kw oe mg mh mi ga" data-selectable-paragraph=""><strong class="kb iz">showThumnailAtLeast:</strong> only display the product detail gallery if as leat this values, for example if we set the value to 2, it only displays the image gallery when more than 3 images.</li><li id="f4be" class="ly lz iy kb b kc mj kg mk kx ml ky mm kz mn kw oe mg mh mi ga" data-selectable-paragraph=""><strong class="kb iz">showVideo</strong>: support to enable the show Video feature, support only for WooCommerce by installing these video plugin</li></ul><div class="of og gt gv oh oi"><a href="https://wordpress.org/plugins/woo-featured-video/" rel="noopener  ugc nofollow" target="_blank"><div class="oj o fr"><div class="ok o da dx en ol"><h2 class="bm iz dm bo fs om fu fv on fx fz ix ga">WooCommerce Featured Video</h2></div><div class="oq l"><div class="or l os ot ou oq ov nk oi"> </div></div></div></a></div><div class="of og gt gv oh oi"><a href="https://wordpress.org/plugins/yith-woocommerce-featured-video/" rel="noopener noreferrer" target="_blank"><div class="oj o fr"><div class="ok o da dx en ol"> </div><div class="oq l"><div class="ow l os ot ou oq ov nk oi"><figure class="post__image"><amp-img src="https://blog.inspireui.com/media/posts/3/Screenshot-2022-11-02-at-14.23.29.png" alt="" width="1406" height="350" sizes="(max-width: 48em) 100vw, 100vw" srcset="https://blog.inspireui.com/media/posts/3/responsive/Screenshot-2022-11-02-at-14.23.29-xs.webp 600w ,https://blog.inspireui.com/media/posts/3/responsive/Screenshot-2022-11-02-at-14.23.29-sm.webp 1000w ,https://blog.inspireui.com/media/posts/3/responsive/Screenshot-2022-11-02-at-14.23.29-md.webp 1200w ,https://blog.inspireui.com/media/posts/3/responsive/Screenshot-2022-11-02-at-14.23.29-lg.webp 2000w" layout="responsive"></amp-img></figure></div></div></div></a></div></div><div class="o dx mo mp id mq" role="separator"><a href="https://wordpress.org/plugins/yith-woocommerce-featured-video/">https://wordpress.org/plugins/yith-woocommerce-featured-video/</a> </div><div class="ir is it iu iv"><h1 id="a3f8" class="la lb iy bm lc ld mv lf lg lh mw lj lk ll mx ln lo lp my lr ls lt mz lv lw lx ga" data-selectable-paragraph="">8. Update new config file.</h1><ul><li id="3c6d" class="ly lz iy kb b kc ma kg mb kx mc ky md kz me kw oe mg mh mi ga" data-selectable-paragraph="">The new server config to link to your website is moved to <code class="fp ox oy oz np b">lib/common/config.dart</code> file, this update to fix the security if uploading the config.json file to the cloud.</li><li id="367e" class="ly lz iy kb b kc mj kg mk kx ml ky mm kz mn kw oe mg mh mi ga" data-selectable-paragraph="">SmartChat feature is updated the new config to support new <a class="au pa" href="https://intercom.com/" rel="noopener ugc nofollow" target="_blank"><strong class="kb iz">Intercom</strong></a> Chat app services.</li></ul></div><div class="o dx mo mp id mq" role="separator"> </div><div class="ir is it iu iv"><h1 id="8c3c" class="la lb iy bm lc ld mv lf lg lh mw lj lk ll mx ln lo lp my lr ls lt mz lv lw lx ga" data-selectable-paragraph="">9. Road Map for next 1.5</h1><ul><li id="764d" class="ly lz iy kb b kc ma kg mb kx mc ky md kz me kw oe mg mh mi ga" data-selectable-paragraph="">Update Configurable Product for Magento</li><li id="be78" class="ly lz iy kb b kc mj kg mk kx ml ky mm kz mn kw oe mg mh mi ga" data-selectable-paragraph="">Add new Booking Features.</li><li id="db72" class="ly lz iy kb b kc mj kg mk kx ml ky mm kz mn kw oe mg mh mi ga" data-selectable-paragraph="">Integrate with Prestashop.</li></ul><p id="ccd2" class="pw-post-body-paragraph jy jz iy kb b kc kd ke kf kg kh ki kj kx kl km kn ky kp kq kr kz kt ku kv kw ir ga" data-selectable-paragraph="">Thank you so much for your time to read this changelog, if the app is helpful for your business please update the rating to encourage the team 💌</p></div><aside><ul class="post-tag"><li><a href="https://blog.inspireui.com/amp/tags/fluxstore/">FluxStore</a></li></ul><div class="post-share"><amp-social-share type="system" width="40" height="40" data-param-text="Announcing Fluxstore 1.4"></amp-social-share><amp-social-share type="facebook" width="40" height="40" data-param-app_id="" data-param-text="Announcing Fluxstore 1.4" data-param-href="https://blog.inspireui.com/amp/announcing-fluxstore-14/"></amp-social-share><amp-social-share type="twitter" width="40" height="40" data-param-text="Announcing Fluxstore 1.4" data-param-url="https://blog.inspireui.com/amp/announcing-fluxstore-14/"></amp-social-share><amp-social-share type="pinterest" width="40" height="40" data-param-url="https://blog.inspireui.com/amp/announcing-fluxstore-14/"></amp-social-share><amp-social-share type="tumblr" width="40" height="40" data-param-text="Announcing Fluxstore 1.4" data-param-url="https://blog.inspireui.com/amp/announcing-fluxstore-14/"></amp-social-share><amp-social-share type="whatsapp" width="40" height="40" data-param-text="Announcing Fluxstore 1.4" data-param-url="https://blog.inspireui.com/amp/announcing-fluxstore-14/"></amp-social-share></div></aside></div></article></main><amp-animation id="showAnim" layout="nodisplay"><script type="application/json">{
+                    "duration": "200ms",
+                    "fill": "both",
+                    "iterations": "1",
+                    "direction": "alternate",
+                    "animations": [{
+                        "selector": ".post-scroll",
+                        "keyframes": [{
+                            "opacity": "1",
+                            "visibility": "visible",
+                            "transform": "scale(1)"
+                        }]
+                    }]
+                }</script></amp-animation><amp-animation id="hideAnim" layout="nodisplay"><script type="application/json">{
+                    "duration": "200ms",
+                    "fill": "both",
+                    "iterations": "1",
+                    "direction": "alternate",
+                    "animations": [{
+                        "selector": ".post-scroll",
+                        "keyframes": [{
+                            "opacity": "0",
+                            "visibility": "hidden",
+                            "transform": "scale(0.1)"
+                        }]
+                    }]
+                }</script></amp-animation><div class="post-scroll-marker"><amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay"></amp-position-observer></div><button class="post-scroll" on="tap:top.scrollTo(duration=200)">&#8593;</button><footer class="bottom">InspireUI Ltd</footer><amp-sidebar id="navbar-sidebar" layout="nodisplay"><ul><li><a href="https://inspireui.com" title="InspireUI Home">Home</a></li><li><a href="https://blog.inspireui.com/amp/" title="Blog">Blog</a></li><li><a href="https://blog.inspireui.com/amp/tags/showcase/" title="Blog">Showcase</a></li><li><a href="https://inspireui.com/products" title="Products">Products</a></li><li><a href="https://inspireui.com/about/" title="About Us">About</a><ul class="navbar__submenu level-2" aria-hidden="true"><li><a href="https://inspireui.com/about/" title="About Us" target="_self">About Us</a></li><li><a href="https://inspireui.com/privacy/" target="_self">Privacy Policy</a></li><li><a href="https://inspireui.com/privacy/" target="_self">Privacy Policy</a></li><li><a href="https://support.inspireui.com" title="Support" target="_self">Support</a></li><li><a href="https://inspireui.com/contact/" target="_self">Contact</a></li></ul></li></ul></amp-sidebar><amp-analytics type="googleanalytics" id="analytics1"><script type="application/json">{
+            "vars": {
+                "account": "UA-90561349-1"
+            },
+            "triggers": {
+                "trackPageview": {
+                    "on": "visible",
+                    "request": "pageview"
+                }
+            }
+        }</script></amp-analytics></body></html>
